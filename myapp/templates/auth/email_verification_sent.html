@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-7">
+        <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+            <div class="card-header">{% trans "Verify Your Email Address" %}</div>
+
+            <div class="card-body">
+              <p>{% trans "We've sent an email to your email address. Please follow the link in the email to verify your account" %}:</p>
+              {% if verification_sent %}
+                <p>{% trans "Verification email has been resent" %}.</p>
+              {% else %}
+                <p>{% trans "Didn't receive an email?" %}" <a href="{% url 'verification_email_resend' %}">{% trans "Resend verification email" %}</a>.</p>
+              {% endif %}
+              <p><a class="link-item" href="{% url 'logout' %}">{% trans "log out" %}</a></p>
+            </div>        	
+        </div>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+#news-ticker {
+  width: 100%;
+  overflow: hidden;
+  background: red;
+}
+
+#news-ticker ul {
+  list-style: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+#news-ticker li {
+  display: inline-block;
+  padding: 0 10px;
+}

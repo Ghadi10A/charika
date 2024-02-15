@@ -1,0 +1,574 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Include the styles for screens with a maximum width of 767px */
+    @media (max-width: 767px) {
+        .col-md-4 {
+            width: 100%;
+            margin: auto; /* Center the column */
+            text-align: center; /* Center the content */
+        }
+
+        .col-md-4 .card {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            max-width: 18rem;
+            margin: auto; /* Center the card */
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+        }
+
+        .btn-sm {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .card-header {
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .card-body ul {
+            padding-left: 10px;
+        }
+
+        .card-body li {
+            margin-bottom: 5px;
+        }
+
+        .card-footer {
+            padding: 5px;
+        }
+
+        .modal-dialog-centered {
+            margin: auto;
+        }
+
+        .modal-content {
+            border-radius: 0;
+        }
+
+        /* Adjust card size */
+        /*.card {
+            height: 400px; /* Adjust the height as needed */
+        }*/
+    }
+    /* ----- Variables ----- */
+$color-primary: #4c4c4c;
+$color-secondary: #a6a6a6;
+$color-highlight: #ff3f40;
+
+/* ----- Global ----- */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    display: grid;
+    grid-template-rows: 1fr;
+    font-family: "Raleway", sans-serif;
+    background-color: #01e37f;
+}
+
+h3 {
+    font-size: 0.7em;
+    letter-spacing: 1.2px;
+    color: $color-secondary;
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+/* ----- Product Section ----- */
+.product {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    margin: auto;
+    padding: 0em 0;
+    min-width: 500px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* ----- Photo Section ----- */
+.product__photo {
+    position: relative;
+}
+
+.photo-container {
+    position: absolute;
+    /*left: -0.5em;*/
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 97%;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+}
+
+.photo-main {
+    border-radius: 6px 6px 0 0;
+    background-color: #9be010;
+    background: radial-gradient(#e5f89e, #96e001);
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.8em;
+        color: #fff;
+
+        i {
+            cursor: pointer;
+        }
+    }
+
+    img {
+        position: center;
+        top: 2em;
+        max-width: 100%;
+        filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+    }
+}
+
+.photo-album {
+    padding: 0.7em 1em;
+    border-radius: 0 0 6px 6px;
+    background-color: #fff;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        float: left;
+        width: 55px;
+        height: 55px;
+        padding: 7px;
+        border: 1px solid $color-secondary;
+        border-radius: 3px;
+    }
+}
+
+/* ----- Informations Section ----- */
+.product__info {
+    padding: 0.8em 0;
+}
+
+.title {
+    h1 {
+        margin-bottom: 0.1em;
+        color: $color-primary;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    span {
+        font-size: 0.7em;
+        color: $color-secondary;
+    }
+}
+
+.price {
+    margin: 0.5em 0;
+    color: $color-highlight;
+    font-size: 1.2em;
+
+    span {
+        padding-left: 0.15em;
+        font-size: 2.9em;
+    }
+}
+
+.variant {
+    overflow: auto;
+
+    h3 {
+        margin-bottom: 1.1em;
+    }
+
+    li {
+        float: left;
+        width: 35px;
+        height: 35px;
+        padding: 3px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:first-child,
+        &:hover {
+            border: 1px solid $color-secondary;
+        }
+    }
+
+    li:not(:first-child) {
+        margin-left: 0.1em;
+    }
+}
+
+.description {
+    clear: left;
+    margin: 2em 0;
+
+
+    h3 {
+        margin-bottom: 1em;
+    }
+
+    ul {
+        font-size: 0.8em;
+        list-style: disc;
+        margin-left: 1em;
+    }
+
+    li {
+        text-indent: -0.6em;
+        margin-bottom: 0.5em;
+    }
+
+}
+
+.buy--btn {
+    padding: 1.5em 3.1em;
+    border: none;
+    border-radius: 7px;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    color: #fff;
+    background-color: $color-highlight;
+    box-shadow: 2px 2px 25px -7px $color-primary;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+/* ----- Footer Section ----- */
+footer {
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+
+    a {
+        color: $color-primary;
+
+        &:hover {
+            color: $color-highlight;
+        }
+    }
+}
+/* Add these styles for larger screens */
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add these styles for smaller screens (mobile devices) */
+@media (max-width: 767px) {
+    .carousel-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.carousel-item {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    margin-right: 15px; /* Adjust the margin between items as needed */
+}
+
+</style>
+
+<br>
+<div class="row">
+    <div class="col-md-4">
+        {% if user.is_authenticated %}
+            <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);max-width: 18rem;">
+                <div class="card-body">
+                    <div class="text-center">
+                        {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" class="rounded-circle me-2" width="200" height="200" alt="{{ user.get_full_name }}">
+                      {% else %}
+    <img src="{% static 'images/Default_image_profile.png' %}" class="rounded-circle me-2" width="200" height="200">
+{% endif %}
+                        <hr>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2 style="font-size:18px;">{{ user.get_full_name }}</h2>
+                    <p style="font-size:11px;"><strong>{% trans "Username" %}:</strong> {{ user.username }}</p>
+                    <p style="font-size:11px;"><strong>{% trans "Account Type" %}:</strong> {{ user.profile.profile_type }}</p>
+                    {% if user.profile.bio %}
+                        <p style="font-size:11px;"><strong>{% trans "Bio" %}:</strong> {{ user.profile.bio }}</p>
+                    {% endif %}
+                    {% if user.profile.birthdate %}
+                        <p style="font-size:11px;"> <strong>{% trans "Birthdate" %}:</strong> {{ user.profile.birthdate }}</p>
+                    {% endif %}
+                    {% if user.profile.city %}
+                        <p style="font-size:11px;"><strong>{% trans "City" %}:</strong> {{ user.profile.city }}</p>
+                    {% endif %}
+                    {% if user.profile.location %}
+                        <p style="font-size:11px;"><strong>{% trans "Location" %}:</strong> {{ user.profile.location }}</p>
+                    {% endif %}
+                    {% if request.user.username == user.username %}
+                        <p style="font-size:11px;"><strong>{% trans "Followers" %}:</strong> {{ user.followers.all|length }}</p>
+                        <p style="font-size:11px;"><strong>{% trans "Following" %}:</strong> {{ user.following.all|length }}</p>
+                    {% endif %}
+                    <br>
+                </div>
+            </div>
+        {% else %}
+            <p>You're not logged in. <a href="{% url 'user_login' %}">{% trans "Sign in" %}</a> to start selling products.</p>
+        {% endif %}
+        <br>
+        <br>
+    </div>
+
+    <div class="col-md-4 text-center mx-auto">
+        <!-- Display details of the selected product -->
+        <div class="col mb-4">
+           <section class="product">
+    <div class="product__photo">
+        <div class="photo-container">
+            <div class="photo-main">
+              <div class="text-center">
+        {% if product.images.all or product.videos.all %}
+            <div id="productCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {% for image in product.images.all %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <img src="{{ image.url }}" class="img-fluid mb-2" alt="{{ product.title }}">
+                        </div>
+                    {% endfor %}
+                    {% for video in product.videos.all %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <video src="{{ video.url }}" class="img-fluid mb-2" controls autoplay></video>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        {% else %}
+            {% if product.image %}
+                <img src="{{ product.image.url }}" class="img-fluid mb-2">
+            {% endif %}
+            {% if product.video %}
+                <video src="{{ product.video.url }}" class="img-fluid mb-2" controls autoplay></video>
+            {% endif %}
+        {% endif %}
+    </div>
+            </div>
+        </div>
+    </div>
+    <div class="product__info">
+        <div class="title">
+            <h1>{{ product.title }}</h1>
+            <span>COD: {{ product.id }}</span>
+        </div>
+        <div class="price">
+            ${{ product.price }}
+        </div>
+        <!-- <div class="variant">
+            <h3>SELECT A COLOR</h3>
+            <ul>
+                {% for product in product.images.all %}
+                    <li><img src="{{ product.image.url }}" alt="{{ product.title }}"></li>
+                {% endfor %}
+            </ul>
+        </div> -->
+    <h5 class="text-center" style="font-size:11px;">Description</h5>
+    <p class="text-center" style="font-size:9px;max-width: 89%;margin: auto;padding: auto;">{{ product.description }}</p>
+
+
+        <!-- Buy Now form -->
+        <form method="post" action="{% url 'stripe_checkout' %}" id="checkout-form">
+            {% csrf_token %}
+            <input type="hidden" name="product_id" value="{{ product.id }}">
+            <div class="d-flex align-items-end">
+                <div class="col-3 form-group">
+                    <label for="quantity" style="font-size: 11px;">Quantity:</label>
+                    <input type="number" name="quantity" class="form-control btn-sm" placeholder="Quantity" min="1"
+                        value="1" style="font-size: 11px;" required>
+                </div>
+
+                <div class="col-9">
+                    <button type="submit" class="btn btn-success btn-sm" style="font-size: 11px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-back" viewBox="0 0 16 16">
+  <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"/>
+  <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1"/>
+</svg>  Buy With Cart</button>
+                </div>
+            </div>
+        </form>
+        <!-- Cash on Delivery (COD) form -->
+        <form method="post" action="{% url 'cod_checkout' %}" id="cod-form" style="margin-bottom:6px;">
+            {% csrf_token %}
+            <input type="hidden" name="product_id" value="{{ product.id }}">
+            <div class="d-flex align-items-end">
+                <div class="col-3 form-group">
+                    <label for="quantity" style="font-size: 11px;">Quantity:</label>
+                    <input type="number" name="quantity" class="form-control btn-sm" placeholder="Quantity" min="1"
+                        value="1" style="font-size: 11px;" required>
+                </div>
+
+                <div class="col-9">
+                    <button type="submit" class="btn btn-warning btn-sm" onclick="openCustomerInfoModal()" style="font-size: 11px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+  <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+</svg> Cash On Delivery</button>
+                </div>
+            </div>
+        </form>
+        <!-- Display star feedback and comments -->
+        <div class="feedback-comments">
+            <!-- <p class="small"><strong>Number of Feedbacks:</strong> {{ product.stars_feedback.all|length }}</p>
+            {% for star in product.stars_feedback.all %}
+                <p class="small"><strong>{{ star.stars }} Stars</strong> by {{ star.author.username }}</p>
+            {% endfor %} -->
+   <div class="d-flex align-items-center">
+      <div class="col">         <!-- Template code - Display total count of heart reactions -->
+<ul style="font-size:7px;">
+  {% if product.stars_feedback.all %}
+    {% regroup product.stars_feedback.all by product as reactions_by_product %}
+    {% for group in reactions_by_product %}
+        <li class="list-group-item" style="border: none;">
+            <div class="text-center">
+                <span style="font-size: 12px;color: gray;">
+                    {% with max_reaction=group.list|first %}
+                        {{ max_reaction.get_star_display }}
+                        <br>{{ max_reaction.product.stars_feedback.count }} {% trans "Feedback" %}
+                    {% endwith %}
+                </span>
+            </div>
+        </li>
+    {% endfor %}
+  {% else %}
+    <li class="list-group-item">
+      <div class="text-center">
+        <span style="font-size: 12px;color: gray;">{% trans "No Feedback" %}</span>
+      </div>
+    </li>
+  {% endif %}
+</ul>
+
+</div>
+      <div class="col">
+            <span style="font-size: 12px;color: gray;"><p class="mb-3 text-center">{{ product.comments.all|length }} {% trans "Comments" %}</p></span>
+        </div>
+    </div>
+</div>
+        {% if user.is_authenticated %}
+            <!-- Allow authenticated users to add comments and star feedback -->
+            <form method="POST" id="comment-form-{{ product.id }}" style="margin-right: 30px;">
+                {% csrf_token %}
+                {{ form_comment.as_p }}
+                <input type="hidden" name="product_id" value="{{ product.id }}">
+                <button type="submit" class="btn btn-primary btn-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-send-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                    </svg> Add Comment
+                </button>
+            </form>
+
+            <form method="POST" id="reaction-form-{{ product.id }}" style="margin-top: 20px;margin-right: 30px;">
+                {% csrf_token %}
+                <input type="hidden" name="product_id" value="{{ product.id }}">
+                <div id="star-picker-container">
+                    {{ form_stars_feedback.stars }}
+                </div>
+                <button type="submit" class="btn btn-warning btn-sm" style="margin-top:6px;">Submit Star Feedback</button>
+            </form>
+        {% endif %}
+    </div>
+</section>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<!-- Modal for capturing customer information -->
+<div class="modal fade" id="customerInfoModal" tabindex="-1" aria-labelledby="customerInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customerInfoModalLabel" style="font-size: 11px;">Customer Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form for capturing customer information -->
+                <form method="post" action="{% url 'save_customer_info' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="order_id" value="{{ order_id }}">
+                    
+                    <div class="mb-3">
+                        <label for="customerName" class="form-label" style="font-size: 11px;">Name:</label>
+                        <input type="text" class="form-control" id="customerName" name="customer_name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customerAddress" class="form-label" style="font-size: 11px;">Address:</label>
+                        <input type="text" class="form-control" id="customerAddress" name="customer_address" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customerPhone" class="form-label" style="font-size: 11px;">Phone Number:</label>
+                        <input type="tel" class="form-control" id="customerPhone" name="customer_phone" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="font-size: 11px;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function openCustomerInfoModal() {
+        // Get the modal element by its ID
+        var modal = document.getElementById('customerInfoModal');
+
+        // Open the modal using Bootstrap's modal method
+        var modalInstance = new bootstrap.Modal(modal);
+        modalInstance.show();
+    }
+</script>
+<br>
+<br>
+<br>
+{% endblock %}

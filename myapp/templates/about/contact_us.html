@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+
+    <div class="row justify-content-center mt-5">
+    <div class="col-md-7">
+        {% if messages %}
+<ul class="list-unstyled">
+    {% for message in messages %}
+    <li class="alert alert-success alert-dismissible fade show" role="alert">
+        {% trans message.message %}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+<br>
+    <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+        <div class="card-body">
+        <h1>{% trans "Contact Us" %}</h1>
+        <p>{% trans "Have a question or comment? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible." %}</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">{% trans "Name" %}:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">{% trans "Email" %}:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">{% trans "Message" %}:</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary btn-sm" style="float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+</svg></button>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+    <br>
+{% endblock %}

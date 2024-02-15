@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<style type="text/css">
+  /* Include the styles for screens with a maximum width of 767px */
+    @media (max-width: 767px) {
+        .col-md-4 {
+            width: 100%;
+            margin: auto; /* Center the column */
+            text-align: center; /* Center the content */
+        }
+
+        .col-md-4 .card {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            max-width: 18rem;
+            margin: auto; /* Center the card */
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+        }
+
+        .btn-sm {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .card-header {
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .card-body ul {
+            padding-left: 10px;
+        }
+
+        .card-body li {
+            margin-bottom: 5px;
+        }
+
+        .card-footer {
+            padding: 5px;
+        }
+
+        .modal-dialog-centered {
+            margin: auto;
+        }
+
+        .modal-content {
+            border-radius: 0;
+        }
+
+        /* Adjust card size */
+        /*.card {
+            height: 400px; /* Adjust the height as needed */
+        }*/
+    }
+    /*this style is for pagination*/
+ .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination .page-item {
+        list-style: none;
+        margin: 0 2px;
+    }
+
+    .pagination .page-link {
+        background-color: #007bff;
+        color: #fff;
+        border: 1px solid #007bff;
+        padding: 5px 8px;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+
+    .pagination .page-link:hover {
+        background-color: #0056b3;
+        color: #fff;
+        border: 1px solid #0056b3;
+    }
+
+    .pagination .page-item.disabled .page-link {
+        background-color: #e9ecef;
+        color: #6c757d;
+        border: 1px solid #ced4da;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #0056b3;
+        color: #fff;
+        border: 1px solid #0056b3;
+    }
+</style>
+<!-- Main section -->
+<section class="main-section py-3">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Left section -->
+      <div class="col-md-4">
+        <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+        <!--   <div class="card-header">
+            <h5>{{ user.username }}</h5>
+          </div> -->
+          <div class="card-body">
+            <div class="text-center">
+               {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" class="rounded-circle me-2" width="200" height="200" alt="{{ user.get_full_name }}">
+                      {% else %}
+    <img src="{% static 'images/Default_image_profile.png' %}" class="rounded-circle me-2" width="200" height="200" alt="Default Profile Image">
+{% endif %}
+<hr>
+            </div>
+            
+            <div class="container">
+    <h1>{{ user.get_full_name }}</h1>
+    <p><strong>{% trans "Username" %}:</strong> {{ user.username }}</p>
+     <p style="font-size:11px;"><strong>{% trans "Account Type" %}:</strong> {{ user.profile.profile_type }}</p>
+    <p class="small" style="font-size:11px;"><a href="{% url 'orders' username=user.username %}" class="btn btn-primary btn-sm" style="font-size:11px;">Orders</a> : {{ profile.get_order_count }}</p>
+    <p style="font-size:11px;">Your Balance: ${{ profile.balance }}</p>
+    <ul>
+    {% for transaction in transactions %}
+      <li>{{ transaction.amount }} - {{ transaction.timestamp }}</li>
+    {% endfor %}
+  </ul>
+  <form method="post" action="{% url 'withdraw' %}" style="margin-bottom:6px;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success btn-sm" style="font-size:11px;">Withdraw Funds</button>
+  </form>
+    {% if user.profile.bio %}
+      <p><strong>{% trans "Bio" %}:</strong> {{ user.profile.bio }}</p>
+    {% endif %}
+    {% if user.profile.birthdate %}
+      <p><strong>{% trans "Birthdate" %}:</strong> {{ user.profile.birthdate }}</p>
+    {% endif %}
+    {% if user.profile.city %}
+      <p><strong>{% trans "City" %}:</strong> {{ user.profile.city }}</p>
+    {% endif %}
+    {% if user.profile.location %}
+      <p><strong>{% trans "Location" %}:</strong> {{ user.profile.location }}</p>
+    {% endif %}
+    {% if user.profile.followers %}
+    <p><strong>{% trans "Followers" %}:</strong> <span class="badge badge-primary">{{ user.followers|length }}</span></p>
+    {% endif %}
+    {% if user.profile.following %}
+    <p><strong>{% trans "Following" %}:</strong> <span class="badge badge-primary">{{ user.following|length }}</span></p>
+    {% endif %}
+    </div>
+            
+          </div>
+        </div>
+        <br>
+      
+<br>
+      </div>
+    
+      
+      <!-- Right section -->
+      <div class="col-md-7">
+        <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+          <div class="card-body">
+    <h1 class="mb-4">Notifications</h1>
+    {% if message_notifications %}
+      <h2>{% trans "Messages" %}:</h2>
+      <div class="list-group">
+        {% for notification in message_notifications %}
+          <a href="{% url 'message_thread' username=notification.message.sender.username %}" class="list-group-item list-group-item-action{% if not notification.is_read %} list-group-item-danger{% endif %}">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ notification.get_notification_type }}</h5>
+              <small>{{ notification.timestamp|date:"F j, Y, g:i a" }}</small>
+            </div>
+            {% if notification.message %}
+              {% with notification.message.sender as sender %}
+                <div class="d-flex align-items-center mt-2">
+                  <img src="{{ sender.profile.image.url }}" alt="{{ sender.username }}" class="me-2 rounded-circle" width="30" height="30">
+                  <p class="mb-0">{{ sender.username }}</p>
+                </div>
+              {% endwith %}
+            {% endif %}
+          </a>
+        {% empty %}
+          <p class="text-center">{% trans "No message notifications" %}.</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if product_notifications %}
+      <h2>Posts:</h2>
+      <div class="list-group">
+        {% for notification in product_notifications %}
+          <a href="{% url 'show_product' product_id=notification.product.id %}" class="list-group-item list-group-item-action{% if not notification.is_read %} list-group-item-danger{% endif %}">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ notification.get_notification_type }}</h5>
+              <small>{{ notification.timestamp|date:"F j, Y, g:i a" }}</small>
+            </div>
+            {% if notification.product %}
+              <div class="mt-2">{{ notification.product.title }}</div>
+            {% endif %}
+          </a>
+        {% empty %}
+          <p class="text-center">{% trans "No product notifications" %}.</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if not message_notifications and not product_notifications %}
+      <p class="text-center">{% trans "No notifications" %}.</p>
+    {% endif %}
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}

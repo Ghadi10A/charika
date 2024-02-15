@@ -1,0 +1,439 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<style>
+    /* Include the styles for screens with a maximum width of 767px */
+    @media (max-width: 767px) {
+        .col-md-4 {
+            width: 100%;
+            margin: auto; /* Center the column */
+            text-align: center; /* Center the content */
+        }
+
+        .col-md-4 .card {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            max-width: 18rem;
+            margin: auto; /* Center the card */
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+        }
+
+        .btn-sm {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .card-header {
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .card-body ul {
+            padding-left: 10px;
+        }
+
+        .card-body li {
+            margin-bottom: 5px;
+        }
+
+        .card-footer {
+            padding: 5px;
+        }
+
+        .modal-dialog-centered {
+            margin: auto;
+        }
+
+        .modal-content {
+            border-radius: 0;
+        }
+
+        /* Adjust card size */
+        /*.card {
+            height: 400px; /* Adjust the height as needed */
+        }*/
+    }
+ /*this style is for pagination*/
+ .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination .page-item {
+        list-style: none;
+        margin: 0 2px;
+    }
+
+    .pagination .page-link {
+        background-color: #007bff;
+        color: #fff;
+        border: 1px solid #007bff;
+        padding: 5px 8px;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+
+    .pagination .page-link:hover {
+        background-color: #0056b3;
+        color: #fff;
+        border: 1px solid #0056b3;
+    }
+
+    .pagination .page-item.disabled .page-link {
+        background-color: #e9ecef;
+        color: #6c757d;
+        border: 1px solid #ced4da;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #0056b3;
+        color: #fff;
+        border: 1px solid #0056b3;
+    }
+</style>
+<br>
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    {% if user.is_authenticated %}
+   <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);max-width: 18rem;">
+      <div class="card-body">
+        <div class="text-center">
+         {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" class="rounded-circle me-2" width="200" height="200" alt="{{ user.get_full_name }}">
+                      {% else %}
+    <img src="{% static 'images/Default_image_profile.png' %}" class="rounded-circle me-2" width="200" height="200">
+{% endif %}
+<hr>
+   
+  </div>
+  </div>
+  <div class="container">
+   <h2 style="font-size:18px;">{{ user.get_full_name }}</h2>
+    <p style="font-size:11px;"><strong>{% trans "Username" %}:</strong> {{ user.username }}</p>
+    <p style="font-size:11px;"><strong>{% trans "Account Type" %}:</strong> {{ user.profile.profile_type }}</p>
+    {% if user.profile.bio %}
+      <p style="font-size:11px;"><strong>{% trans "Bio" %}:</strong> {{ user.profile.bio }}</p>
+    {% endif %}
+    {% if user.profile.birthdate %}
+      <p style="font-size:11px;"> <strong>{% trans "Birthdate" %}:</strong> {{ user.profile.birthdate }}</p>
+    {% endif %}
+    {% if user.profile.city %}
+      <p style="font-size:11px;"><strong>{% trans "City" %}:</strong> {{ user.profile.city }}</p>
+    {% endif %}
+    {% if user.profile.location %}
+      <p style="font-size:11px;"><strong>{% trans "Location" %}:</strong> {{ user.profile.location }}</p>
+    {% endif %}
+     {% if request.user.username == user.username %}
+      <p style="font-size:11px;"><strong>{% trans "Followers" %}:</strong> {{ user.followers.all|length }}</p>
+      <p style="font-size:11px;"><strong>{% trans "Following" %}:</strong> {{ user.following.all|length }}</p>
+    {% endif %}
+    <br>    
+      </div>
+      
+
+    </div>
+      {% else %}
+  <p>You're not logged in. <a href="{% url 'user_login' %}">{% trans "Sign in" %}</a> to start selling products.</p>
+{% endif %}
+<br>
+<br>
+  </div>
+
+   <div class="col-md-7 mx-auto">
+           {% if messages %}
+            <div class="container mt-3">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <br>
+
+            <div class="container d-flex flex-nowrap">
+               <div class="order-1 p-1">
+           <form method="get" action="{% url 'home' %}" class="form-inline mb-3">
+    <div class="d-flex flex-nowrap">
+        <div class="order-2 p-1">
+            <div class="form-group">
+               <!--  <label for="category" class="mr-2" style="font-size: 11px; right: 6px;">Category:</label> -->
+                <select name="category" class="form-control btn-sm" style="font-size: 9px;width: 75px;">
+                    {% for choice in category_choices %}
+                        <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="order-2 p-1">
+            <div class="form-group">
+                <!-- <label for="date" class="mr-2" style="font-size: 11px;">Date:</label> -->
+                <input type="date" name="date" id="date" class="form-control mr-2 btn-sm" style="font-size: 9px;">
+            </div>
+        </div>
+
+        <div class="order-3 p-1">
+            <div class="form-group">
+                <!-- <label for="price" class="mr-2" style="font-size: 11px;">Price:</label> -->
+                <input type="text" name="price" id="price" placeholder="M-Max Price" class="form-control mr-2 btn-sm  align-middle" style="font-size: 9px;width:75px;">
+            </div>
+        </div>
+
+        <div class="order-4 p-1">
+            <button type="submit" class="btn btn-primary btn-sm align-middle" style="font-size: 11px;">Apply</button>
+        </div>
+    </div>
+</form>
+
+</div>
+<div class="order-5 p-1">
+          <form method="post" action="{% url 'search' %}" class="form-group">
+            <div class="d-flex flex-nowrap">
+             <div class="order-1 p-1">
+              {% csrf_token %}
+              {{ search_form.as_p }}
+            </div>
+            <div class="order-2 p-1">
+              <button type="submit" name="search" class="btn btn-success btn-sm align-middle" onclick="showLoadingSpinner()" style="font-size: 11px;">{% trans "Search" %}</button>
+            </div>
+            <div class="order-3 p-2">
+            <div class="text-center" style="float: right;"><div id="loading" class="spinner-border" style="display: none;"></div></div>
+    <script type="text/javascript">
+          function showLoadingSpinner() {
+      $("#loading").show();
+    }
+
+    function hideLoadingSpinner() {
+      $("#loading").hide();
+}
+
+  hideLoadingSpinner();
+</script>
+</div>
+</div>  
+</form>
+</div>
+</div>
+      <!-- <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);margin-bottom: 6px;margin-top:6px">
+        <div class="card-header">
+          <h2>{% trans "Sell Product" %}</h2>
+        </div>
+        <div class="card-body">
+    
+  </div>
+</div> -->
+
+<!--   <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);margin-bottom: 6px;margin-top:6px">
+        <div class="card-header">
+          <h2>{% trans "Create Group" %}</h2>
+        </div>
+        <div class="card-body">
+          
+        </div>
+      </div> -->
+
+   <!-- Display list of products -->
+            <!-- Display list of products -->
+<!-- Display list of products -->
+<!-- Display list of products -->
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for product in products %}
+        <div class="col mb-4">
+          <a href="{% url 'show_product' product.id %}" class="card-link" style="text-decoration: none;">
+            <div class="card h-100 shadow p-0">
+                <div class="card-body p-0">
+
+                    <!-- Display product image carousel inside the card-body -->
+                    {% if product.images.all %}
+                        <div id="carouselExampleControls-{{ product.id }}" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for image in product.images.all %}
+                                    <div class="carousel-item {% if forloop.first %}active{% endif %}" style="position:relative;">
+                                        <img src="{{ image.url }}" class="d-block w-100 img-fluid" alt="{{ product.title }}" style="height:88%;">
+                                        <div class="img-overlay" style="position: absolute;bottom: 5%;right: 3%;">
+                                            <p class="small" style="text-decoration: none;">Price: ${{ product.price }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-{{ product.id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-{{ product.id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    {% else %}
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.title }}" style="height:82%;">
+
+                        {% endif %}
+                        <div class="text-center mt-2">
+                            <p class="small" style="text-decoration: none;">Price: ${{ product.price }}</p>
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Display star feedback and comments in the card-footer -->
+                <div class="card-footer" style="padding: 4px;">
+                    <div class="text-center text-primary">
+                        <p style="font-size:9px;color: gray;padding: 0;margin:0;">{{ product.created_at|timesince }} by <strong style="color:#000,">{{ product.seller.username }}</strong></p>
+                        {% if product.stars_feedback.all %}
+                      {% with max_reaction=product.stars_feedback.all|first %}
+                        <p class="small" style="text-decoration: none;padding: 3px;margin: 3px;">
+                          <strong style="text-decoration: none;">
+                            {{ max_reaction.get_star_display }} <br>{{ product.stars_feedback.count }} {% trans "Feedback" %}
+                          </strong>
+                        </p>
+                      {% endwith %}
+                    {% else %}
+                      <p class="small" style="text-decoration: none;padding: 3px;margin: 3px">
+                        <span style="font-size: 12px;color: gray;">{% trans "No Feedback" %}</span>
+                      </p>
+                    {% endif %}
+
+                 
+                   <!--  {% for comment in product.comments.all %}
+                        <p class="small" style="font-size:9px;"><strong>Comment:</strong> {{ comment.comment }} by {{ comment.author.username }}</p>
+                    {% endfor %} -->
+                    {% if product.comments.all %}
+                      {% with latest_comment=product.comments.all|first %}
+                        <p class="small" style="font-size:9px;padding: 3px;margin: 3px;">
+                          <strong>{{ product.comments.all|length }} Comments:</strong> {{ latest_comment.comment }} by {{ latest_comment.author.username }}
+                        </p>
+                      {% endwith %}
+                      {% else %}
+                         <p class="small" style="font-size:9px;">{{ product.comments.all|length }} Comments</p>
+                    {% endif %}
+                    <!-- <span style="font-size: 7px;color: gray;"><p class="mb-3 text-center">{{ product.comments.all|length }} {% trans "Comments" %}</p></span> -->
+                </div>
+                {% if request.user.is_authenticated %}
+                {% if product.id in cart_items_ids %}
+                    <form method="post" action="{% url 'remove_from_cart' product.id %}" style="margin-bottom:6px;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm w-100" style="font-size: 11px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708"/>
+</svg> Remove</button>
+                    </form>
+                {% else %}
+                    <form method="post" action="{% url 'add_to_cart' product.id %}" style="margin-bottom:6px;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success btn-sm w-100" style="font-size: 11px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+</svg> Add to Cart</button>
+                    </form>
+                {% endif %}
+           
+            {% endif %}
+
+                    {% if user.is_authenticated %}
+                        <!-- Allow authenticated users to add comments and star feedback -->
+                        <form method="POST" id="comment-form-{{ product.id }}">
+                            {% csrf_token %}
+                            <input type="hidden" name="product_id" value="{{ product.id }}">
+                            <!-- {{ form_comment.as_p }} -->
+                            <button type="submit" class="btn btn-primary btn-sm w-100" style="font-size:11px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z" />
+                                </svg></button>
+                        </form>
+                   
+              <!--   <div style="margin-top:6px">
+                    <form method="POST" action="{% url 'stripe_checkout' %}" class="mb-2">
+                        {% csrf_token %}
+                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                        <button type="submit" class="btn btn-success btn-sm w-100" style="font-size: 11px;">Buy with Stripe</button>
+                    </form>
+                   
+                </div>
+          
+                        <form method="POST" id="reaction-form-{{ product.id }}" style="margin-top: 5px;">
+                            {% csrf_token %}
+                            <input type="hidden" name="product_id" value="{{ product.id }}">
+                            <div id="star-picker-container">
+                                {{ form_stars_feedback.stars }}
+                            </div>
+                            <button type="submit" class="btn btn-warning btn-sm w-100" style="margin-top:6px;font-size: 11px;">Add Feedback</button>
+                        </form> -->
+                    {% endif %}
+                </div>
+            </div>
+       </a>
+        </div>
+    {% empty %}
+        <p>No products yet.</p>
+    {% endfor %}
+
+</div>
+
+<div class="text-center">
+   <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center pagination-sm">
+
+        {% if products.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page=1" aria-label="First">
+                    <span aria-hidden="true">&laquo;&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {% endif %}
+
+        <li class="page-item disabled">
+            <span class="page-link">Page {{ products.number }} of {{ products.paginator.num_pages }}.</span>
+        </li>
+
+        {% if products.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.paginator.num_pages }}" aria-label="Last">
+                    <span aria-hidden="true">&raquo;&raquo;</span>
+                </a>
+            </li>
+        {% endif %}
+
+    </ul>
+</nav>
+
+</div>
+
+
+
+
+</div>
+</div>
+</br>
+</div>
+
+{% endblock %}

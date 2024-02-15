@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="row justify-content-center mt-5">
+    <div class="col-md-7">
+    <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+        <div class="card-body">
+        <h1 class="text-center mb-4">{% trans "Terms of Service" %}</h1>
+        <p>{% trans "Welcome to our website! This website is provided as a service to our users. Please read these terms and conditions carefully before using our website. By using our website, you agree to these terms and conditions" %}.</p>
+
+        <h2 class="mt-5">{% trans "1. Use of Our Website" %}</h2>
+        <p>{% trans "You may use our website for lawful purposes only. You may not use our website" %}:</p>
+        <ul>
+            <li>{% trans "in any way that violates any applicable federal, state, local, or international law or regulation" %};</li>
+            <li>{% trans "to engage in any fraudulent or malicious activity" %};</li>
+            <li>{% trans "to transmit any advertising or promotional material without our prior written consent" %};</li>
+            <li>{% trans "to impersonate or attempt to impersonate us, our employees, another user, or any other person or entity" %};</li>
+            <li>{% trans "to interfere with or disrupt the operation of our website or servers or networks connected to our website" %}; {% trans "or" %}</li>
+            <li>{% trans "to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability" %}.</li>
+        </ul>
+
+        <h2 class="mt-5">{% trans "2. Market Predictions and Investment Advice" %}</h2>
+        <p>{% trans "The market predictions and investment advice provided on our website are for informational purposes only and should not be construed as financial or investment advice. You should consult a qualified professional advisor before making any investment decisions" %}.</p>
+
+        <h2 class="mt-5">{% trans "3. User Content" %}</h2>
+        <p>{% trans "You are solely responsible for any content that you post or transmit on our website. You agree not to post or transmit any content that is" %}:</p>
+        <ul>
+            <li>{% trans "unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, libelous, invasive of another's privacy, or hateful" %};</li>
+            <li>{% trans "contains any virus, worm, Trojan horse, or other harmful component" %};</li>
+            <li>{% trans "infringes any intellectual property right or other proprietary right of any third party" %}; {% trans "or" %}</li>
+            <li>{% trans "contains any advertising or promotional material without our prior written content" %}.</li>
+        </ul>
+        <p>{% trans "We reserve the right to remove any user content that violates these terms and conditions or for any other reason in our sole discretion" %}.</p>
+
+        <h2 class="mt-5">{% trans "4. Disclaimer of Warranties" %}</h2>
+        <p>{% trans "Our website is provided on an as is and as available basis. We make no representations or warranties of any kind, express or implied, as to the operation of our website or the information, content, materials, or products included on our website. You expressly agree that your use of our website is at your sole risk" %}.</p>
+
+        <h2 class="mt-5">{% trans "5. Limitation of Liability" %}</h2>
+        <p>{% trans "In no event shall we be liable for any direct, indirect, punitive, incidental, special, or consequential damages arising out of or in any way connected with the use of our website, whether based on contract, tort, strict liability, or any other theory of liability, even if we have been advised of the possibility" %}</p>
+    <h2 class="mt-5">{% trans "6. Indemnification" %}</h2>
+    <p>{% trans "You agree to indemnify and hold us and our affiliates, officers, agents, and employees harmless from any claim, demand, or damage, including reasonable attorneys' fees, arising out of or in connection with your use of our website or your breach of these terms and conditions" %}.</p>
+
+    <h2 class="mt-5">{% trans "7. Modifications to Our Website and Terms of Service" %}</h2>
+    <p>{% trans "We reserve the right to modify or discontinue our website, or any portion thereof, with or without notice to you. We may also change these terms and conditions from time to time without notice to you. By continuing to use our website after any modifications to these terms and conditions, you agree to be bound by such modifications" %}.</p>
+
+    <h2 class="mt-5">{% trans "8. Governing Law and Jurisdiction" %}</h2>
+    <p>{% trans "These terms and conditions shall be governed by and construed in accordance with the laws of the state of California, without regard to its conflicts of law principles. Any legal action or proceeding arising out of or relating to these terms and conditions or your use of our website shall be brought exclusively in a state or federal court located in San Francisco, California" %}.</p>
+
+    <h2 class="mt-5">{% trans "9. Contact Us" %}</h2>
+    <p>{% trans "If you have any questions about these terms and conditions or our website, please contact us at" %} <a href="mailto:contact@chatnun.com">contact@chatnun.com</a>.</p>
+</div>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+{% endblock %}

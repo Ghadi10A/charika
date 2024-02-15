@@ -1,0 +1,513 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<style>
+    /* Include the styles for screens with a maximum width of 767px */
+    @media (max-width: 767px) {
+        .col-md-4 {
+            width: 100%;
+            margin: auto; /* Center the column */
+            text-align: center; /* Center the content */
+        }
+
+        .col-md-4 .card {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            max-width: 18rem;
+            margin: auto; /* Center the card */
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .rounded-circle {
+            border-radius: 50%;
+        }
+
+        .btn-sm {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .card-header {
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .card-body ul {
+            padding-left: 10px;
+        }
+
+        .card-body li {
+            margin-bottom: 5px;
+        }
+
+        .card-footer {
+            padding: 5px;
+        }
+
+        .modal-dialog-centered {
+            margin: auto;
+        }
+
+        .modal-content {
+            border-radius: 0;
+        }
+
+        /* Adjust card size */
+        /*.card {
+            height: 400px; /* Adjust the height as needed */
+        }*/
+    }
+    /*this style is for pagination*/
+ .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination .page-item {
+        list-style: none;
+        margin: 0 2px;
+    }
+
+    .pagination .page-link {
+        background-color: #007bff;
+        color: #fff;
+        border: 1px solid #007bff;
+        padding: 5px 8px;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+
+    .pagination .page-link:hover {
+        background-color: #0056b3;
+        color: #fff;
+        border: 1px solid #0056b3;
+    }
+
+    .pagination .page-item.disabled .page-link {
+        background-color: #e9ecef;
+        color: #6c757d;
+        border: 1px solid #ced4da;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #0056b3;
+        color: #fff;
+        border: 1px solid #0056b3;
+    }
+</style>
+<br>
+<div class="row">
+  <div class="col-md-4 mx-auto">
+   <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);max-width: 18rem;">
+      <div class="card-body">
+        <div class="text-center">
+         {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" class="rounded-circle me-2" width="200" height="200" alt="{{ user.get_full_name }}">
+                      {% else %}
+    <img src="{% static 'images/Default_image_profile.png' %}" class="rounded-circle me-2" width="200" height="200">
+{% endif %}
+<hr>
+   
+  </div>
+  </div>
+  <div class="container">
+   <h2 style="font-size:18px;">{{ user.get_full_name }}</h2>
+    <p style="font-size:11px;"><strong>{% trans "Username" %}:</strong> {{ user.username }}</p>
+    <p style="font-size:11px;"><strong>{% trans "Account Type" %}:</strong> {{ user.profile.profile_type }}</p>
+    <p class="small" style="font-size:11px;"><a href="{% url 'orders' username=user.username %}" class="btn btn-primary btn-sm" style="font-size:11px;">Orders</a> : {{ profile.get_order_count }}</p>
+    <p style="font-size:11px;">Your Balance: ${{ profile.balance }}</p>
+    <ul>
+    {% for transaction in transactions %}
+      <li>{{ transaction.amount }} - {{ transaction.timestamp }}</li>
+    {% endfor %}
+  </ul>
+  <form method="post" action="{% url 'withdraw' %}" style="margin-bottom:6px;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success btn-sm" style="font-size:11px;">Withdraw Funds</button>
+  </form>
+    {% if user.profile.bio %}
+      <p style="font-size:11px;"><strong>{% trans "Bio" %}:</strong> {{ user.profile.bio }}</p>
+    {% endif %}
+    {% if user.profile.birthdate %}
+      <p style="font-size:11px;"> <strong>{% trans "Birthdate" %}:</strong> {{ user.profile.birthdate }}</p>
+    {% endif %}
+    {% if user.profile.city %}
+      <p style="font-size:11px;"><strong>{% trans "City" %}:</strong> {{ user.profile.city }}</p>
+    {% endif %}
+    {% if user.profile.location %}
+      <p style="font-size:11px;"><strong>{% trans "Location" %}:</strong> {{ user.profile.location }}</p>
+    {% endif %}
+     {% if request.user.username == user.username %}
+      <p style="font-size:11px;"><strong>{% trans "Followers" %}:</strong> {{ user.followers.all|length }}</p>
+      <p style="font-size:11px;"><strong>{% trans "Following" %}:</strong> {{ user.following.all|length }}</p>
+    {% endif %}
+    <br>
+
+    <button type="button" class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#profileModal" style="margin: 10px;">
+  {% trans "Update Profile" %}
+</button>
+
+      </div>
+    </div>
+      {% if user.groups.exists %}
+     <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);margin-top: 6px;">
+  <div class="card-header">
+    <h5>{% trans "Groups" %}</h5>
+  </div>
+  <div class="card-body">
+    <ul>
+      {% for group in user.joined_groups.all %}
+         <li class="list-group-item">
+            <a href="{% url 'group_detail' name=group.name pk=group.pk %}">
+              {{ group.name }}
+              <span class="badge badge-primary">{{ group.members.count }} {% trans "Members" %}</span>
+            </a>
+         </li>
+      {% endfor %}
+      {% for group in user.admin_groups.all %}
+        <li class="list-group-item">
+          <a href="{% url 'group_detail' name=group.name pk=group.pk %}">
+            {{ group.name }} {% trans "admin" %}
+            <span class="badge badge-primary">{{ group.members.count }} {% trans "Members" %}</span>
+          </a>
+        </li>
+      {% endfor %}
+      
+    </ul>
+  </div>
+</div>
+{% endif %}
+<br>
+<br>
+  </div>
+
+   <div class="col-md-7 mx-auto">
+      <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);margin-bottom: 6px;margin-top:6px;">
+        <div class="card-header">
+          <h2>{% trans "Sell Product" %}</h2>
+        </div>
+        <div class="card-body">
+    <form method="post" action="{% url 'sell_product' %}" enctype="multipart/form-data" id="product-form">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="title" style="font-size: 11px;">Product Title:</label>
+          <input type="text" name="title" class="form-control" placeholder="Product Title"  required style="font-size: 11px;">
+        </div>
+        <div class="form-group">
+          <label for="description" style="font-size: 11px;">Product Description:</label>
+          <textarea name="description" class="form-control" placeholder="Product Description" required style="font-size: 11px;"></textarea>
+        </div>
+        <div class="d-flex align-items-center">
+      <div class="col">
+       <div class="form-group">
+        <label for="category" style="font-size: 11px;right:6px;">Product Category:</label>
+        <select name="category" class="form-control btn-sm" style="font-size:11px;">
+            {% for choice in category_choices %}
+                <option value="{{ choice.0 }}" style="font-size:11px;">{{ choice.1 }}</option>
+            {% endfor %}
+        </select>
+    </div>
+  </div>
+      <div class="col">
+        <div class="form-group">
+  <label for="price" style="font-size: 11px;">Product Price (MAD):</label>
+  <div class="input-group">
+    <span class="input-group-prepend">
+      <span class="input-group-text btn-sm" style="font-size:11px;">MAD</span>
+    </span>
+    <input type="number" name="price" class="form-control btn-sm" style="font-size:11px;"placeholder="Product Price" min="1">
+    <span class="input-group-append">
+      <button class="btn btn-outline-secondary btn-sm" type="button" onclick="incrementPrice()">+</button>
+    </span>
+  </div>
+</div>
+</div>
+</div>
+<script>
+    function incrementPrice() {
+      var priceInput = document.getElementsByName('price')[0];
+      var currentPrice = parseFloat(priceInput.value) || 0;
+      priceInput.value = (currentPrice + 1).toFixed(2);
+    }
+
+    function decrementPrice() {
+      var priceInput = document.getElementsByName('price')[0];
+      var currentPrice = parseFloat(priceInput.value) || 0;
+      priceInput.value = Math.max(0, (currentPrice - 1)).toFixed(2);
+    }
+  </script>
+  <div class="d-flex align-items-center">
+      <div class="col">
+  <div class="form-group">
+        <label for="quantity" style="font-size: 11px;">Quantity:</label>
+        <input type="number" name="quantity" class="form-control btn-sm" placeholder="Quantity" min="1" value="1" style="font-size:11px;" required>
+    </div>
+ </div>
+ <div class="col">
+    <div class="form-group">
+        <label for="size" style="font-size: 11px;">Size:</label>
+        <input type="text" name="size" class="form-control btn-sm" placeholder="Size" style="font-size:11px;">
+    </div>
+  </div>
+<div class="col">
+    <div class="form-group">
+        <label for="weight" style="font-size: 11px;">Weight (kg):</label>
+        <input type="number" name="weight" class="form-control btn-sm" placeholder="Weight" min="0" step="0.01" style="font-size:11px;">
+    </div>
+</div>
+<div class="col">
+    <div class="form-group">
+        <label for="color" style="font-size: 11px;">Color:</label>
+        <input type="text" name="color" class="form-control btn-sm" placeholder="Color" style="font-size:11px;">
+    </div>
+</div>
+</div>
+    <div class="form-group">
+        <label for="payment" style="font-size: 11px;">Payment Method:</label>
+        <div class="d-flex align-items-center">
+      <div class="col">
+        <div class="form-check">
+            <input type="checkbox" name="payment" value="stripe" class="form-check-input btn-sm" id="payment-stripe" checked>
+            <label class="form-check-label" for="payment-stripe" style="font-size: 11px;">Online Payment</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-check">
+            <input type="checkbox" name="payment" value="cod" class="form-check-input" id="payment-cod">
+            <label class="form-check-label" for="payment-cod" style="font-size: 11px;">Cash on Delivery (COD)</label>
+        </div>
+      </div>
+    </div>
+    </div>
+        <div class="form-group" style="padding:0px;">
+          <label for="image" style="font-size: 9px;">Product Image:1</label>
+          <input type="file" name="image" class="form-control btn-sm" style="font-size:9px;" accept="image/*" multiple>
+        </div>
+        <div class="form-group">
+  <label for="video" style="font-size: 11px;">Product Video:</label>
+  <div class="input-group">
+    <div class="custom-file">
+      <input type="file" name="video" class="custom-file-input btn-sm" style="font-size:11px;" accept="video/*">
+      <label class="custom-file-label" style="font-size:11px;" multiple>Choose video file...</label>
+    </div>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary btn-sm" style="font-size:11px;" type="button" onclick="clearVideoInput()">Clear</button>
+    </div>
+  </div>
+</div>
+</br>
+        <button type="submit" class="btn btn-warning btn-sm w-100" onclick="showLoadingSpinner()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg>
+        </button>
+
+      </form>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for product in products %}
+        <div class="col mb-4">
+          
+          
+            <div class="card h-100 shadow text-center" style="max-width: 18rem;">
+                <div class="card-body p-0">
+                  <a href="{% url 'show_product' product.id %}" class="card-link" style="text-decoration: none;">
+                    <!-- Display product image carousel inside the card-body -->
+                    {% if product.images.all %}
+                        <div id="carouselExampleControls-{{ product.id }}" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              
+                                {% for image in product.images.all %}
+                                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                        <img src="{{ image.url }}" class="d-block w-100 img-fluid" alt="{{ product.title }}" style="height:88%;">
+                                        <div class="carousel-caption d-none d-md-block text-dark">
+                                            <p class="small" style="text-decoration: none;">Price: ${{ product.price }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-{{ product.id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-{{ product.id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    {% else %}
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.title }}" style="height:84%;">
+                        {% endif %}
+                        <div class="text-center mt-2">
+                            <p class="small" style="text-decoration: none;">Price: ${{ product.price }}</p>
+                        </div>
+                    {% endif %}
+                    
+                </div>
+
+                <!-- Display star feedback and comments in the card-footer -->
+              </a>
+                <div class="card-footer text-muted p-2">
+ <div class="dropdown" style="float: right;">
+  <button class="btn btn-outline-white btn-sm" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+      <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+    </svg>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="{% url 'update_product' product_id=product.id %}">{% trans "Edit" %}</a></li>
+    <li><a class="dropdown-item delete-post-link" href="{% url 'delete_product' product_id=product.id %}">{% trans "Delete" %}</a></li>
+  </ul>
+</div>
+                        <div class="text-center text-primary">
+                        {% if product.stars_feedback.all %}
+                      {% with max_reaction=product.stars_feedback.all|first %}
+                        <p class="small" style="text-decoration: none;font-size: 9px;">
+                          <strong style="text-decoration: none;">
+                            {{ max_reaction.get_star_display }} <br>{{ product.stars_feedback.count }} {% trans "Feedback" %}
+                          </strong>
+                        </p>
+                      {% endwith %}
+                    {% else %}
+                      <p class="small" style="text-decoration: none;font-size: 9px;">
+                        <span style="font-size: 12px;color: gray;">{% trans "No Feedback" %}</span>
+                      </p>
+                    {% endif %}
+
+                 
+                   <!--  {% for comment in product.comments.all %}
+                        <p class="small" style="font-size:9px;"><strong>Comment:</strong> {{ comment.comment }} by {{ comment.author.username }}</p>
+                    {% endfor %} -->
+                     {% if product.comments.all %}
+                      {% with latest_comment=product.comments.all|first %}
+                        <p class="small" style="font-size:9px;">
+                          <strong>{{ product.comments.all|length }} Comments:</strong> {{ latest_comment.comment }} by {{ latest_comment.author.username }}
+                        </p>
+                      {% endwith %}
+                     {% else %}
+                         <p class="small" style="font-size:9px;">{{ product.comments.all|length }} Comments</p> 
+                    {% endif %}
+                </div>
+                   
+                </div>
+            </div>
+
+        </div>
+    {% empty %}
+        <p>No products yet.</p>
+    {% endfor %}
+</div>
+<div class="text-center">
+   <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center pagination-sm">
+
+        {% if products.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page=1" aria-label="First">
+                    <span aria-hidden="true">&laquo;&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {% endif %}
+
+        <li class="page-item disabled">
+            <span class="page-link">Page {{ products.number }} of {{ products.paginator.num_pages }}.</span>
+        </li>
+
+        {% if products.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page={{ products.paginator.num_pages }}" aria-label="Last">
+                    <span aria-hidden="true">&raquo;&raquo;</span>
+                </a>
+            </li>
+        {% endif %}
+
+    </ul>
+</nav>
+
+</div>
+</div>
+</div>
+</br>
+</div>
+
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">{% trans "Update Profile" %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form goes here -->
+                <form method="post" enctype="multipart/form-data" id="profile-form">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="id_image" class="form-label">Image:</label>
+                        <input type="file" name="image" id="id_image" accept="image/*" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_bio" class="form-label">Bio:</label>
+                        <textarea name="bio" id="id_bio" rows="3" class="form-control" required>{{ profile.bio }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+    <label for="id_birthdate" class="form-label">Birthdate:</label>
+    <input type="date" name="birthdate" id="id_birthdate" class="form-control" value="{% if profile.birthdate %}{{ profile.birthdate|date:'Y-m-d' }}{% endif %}">
+</div>
+
+
+                    <div class="form-group">
+                        <label for="id_city" class="form-label">City:</label>
+                        <input type="text" name="city" id="id_city" class="form-control" value="{{ profile.city }}">
+                    </div>
+
+                    <!-- You may need to include the required JavaScript and CSS for the location field -->
+                    <div class="form-group">
+                        <label for="id_location" class="form-label">Location:</label>
+                        <!-- Include your location field input here based on how it's rendered in your HTML -->
+                        <input type="text" name="location" id="id_location" class="form-control" value="{{ profile.location }}">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-sm w-100">{% trans "Save" %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

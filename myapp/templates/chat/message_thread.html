@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<style type="text/css">
+  label {
+    display: none;
+  }
+  #chat-log {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #chat-log li {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  #chat-log li:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  #chat-log li .message-content {
+    background-color: #DCF8C6;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  #chat-log li:nth-child(even) .message-content {
+    background-color: #F0F0F0;
+  }
+  
+  #chat-log li .message-timestamp {
+    font-size: 12px;
+    color: gray;
+    margin-left: 10px;
+  }
+  
+  #chat-log li .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  #chat-log li:nth-child(even) .profile-image {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  .float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+@media (max-width: 767px) {
+  .col-md-4 {
+    width: 100%;
+    margin-top:30px;
+    margin-bottom:20px;
+  }
+  
+  .col-md-7 {
+    width: 100%;
+  }
+label {
+display: none;
+}
+
+#chat-log li .profile-image {
+margin-right: 0;
+margin-left: 10px;
+}
+
+.float-right {
+float: none;
+}
+
+.float-left {
+float: none;
+}
+
+.card-body {
+padding: 0.5rem;
+}
+
+.card-footer {
+padding: 0.5rem;
+}
+
+#message-form {
+margin-bottom: 50px;
+}
+}
+</style>
+<div class="container ">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+        <div class="card-body">
+          <h4 class="mb-3">{% trans "Saved Conversations" %}</h4>
+          <hr>
+          <div class="list-group">
+           {% for conversation in conversations %}
+              {% if conversation.sender == request.user %}
+                {% with recipient=conversation.recipient %}
+                  <div class="conversation">
+                    <a href="{% url 'message_thread' recipient.username %}" style="text-decoration:none;">
+                      <img src="{{ recipient.profile.image.url }}" alt="Profile Image" class="profile-image">
+                      <span class="username">{{ recipient.username }}</span>
+                      <span class="last-message">{{ conversation.content }}</span>
+                      <span class="timestamp">{{ conversation.timestamp|date:"F j, Y, g:i a" }}</span>
+                    </a>
+                  </div>
+                {% endwith %}
+              {% else %}
+                {% with sender=conversation.sender %}
+                  <div class="conversation">
+                    <a href="{% url 'message_thread' sender.username %}" style="text-decoration:none;">
+                      <img src="{{ sender.profile.image.url }}" alt="Profile Image" class="profile-image">
+                      <span class="username">{{ sender.username }}</span>
+                      <span class="last-message">{{ conversation.content }}</span>
+                      <span class="timestamp">{{ conversation.timestamp|date:"F j, Y, g:i a" }}</span>
+                    </a>
+                  </div>
+                {% endwith %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);margin-top: 6px;">
+        <div class="card-header">
+          <h4 class="mb-0">{{ recipient.username }}</h4>
+        </div>
+        <div class="card-body" id="message-list">
+          <ul class="list-group" id="chat-log">
+            {% for message in messages %}
+            <li class="list-group-item" style="border: none;">
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <a href="{% url 'profile' username=message.sender.username %}" style="text-decoration:none;">
+                  {% if message.sender.profile.image %}
+                  <img src="{{ message.sender.profile.image.url }}" width="30" height="30" class="rounded-circle">
+                  {% else %}
+                  <img src="{% static 'images/Default_image_profile.png' %}" width="30" height="30" class="rounded-circle">
+                  {% endif %}
+                  <span style="font-size: 11px;font-family: bold;">{{ message.sender }}</span>
+                  </a>
+                </div>
+                <div class="col-md-8 {% if message.sender == user %}float-right{% else %}float-left{% endif %}">
+                  <div class="card {% if message.sender == user %}bg-secondary{% else %}bg-secondary{% endif %}">
+                    <div class="card-body text-white">
+                      {{ message.content }}
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-white" style="font-size: 10px;">{{ message.timestamp|date:"D d M Y, h:i" }}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            {% empty %}
+            <p>{% trans "No messages yet" %}.</p>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="card-footer">
+          <form method="POST" onsubmit="scrollToBottom()" id="message-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-outline-primary btn-sm" id="message-send-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+              <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+            </svg></button>
+          </form>
+          <script>
+function scrollToBottom() {
+  var container = document.getElementById("message-form");
+  window.scrollTo(-1, document.body.scrollHeight);
+
+}
+
+window.onload = function() {
+  scrollToBottom();
+};
+
+</script>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+{% endblock %}

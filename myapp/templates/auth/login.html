@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% block content %}
+<style type="text/css">
+    .helptext {
+        display: none;
+    }
+
+    label {
+        font-size: 10px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 50%;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+</style>
+
+<div class="row justify-content-center mt-5">
+    <div class="jumbotron text-center">
+        <div class="text-center">
+            <div id="loading" class="spinner-border" style="display: none;"></div>
+        </div>
+        <script type="text/javascript">
+            function showLoadingSpinner() {
+                $("#loading").show();
+            }
+
+            function hideLoadingSpinner() {
+                $("#loading").hide();
+            }
+
+            hideLoadingSpinner();
+        </script>
+    </div>
+    <br>
+    <div class="col-md-5">
+        <div class="text-center">
+            {% if messages %}
+            <div class="container mt-3">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} text-danger">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+                <div class="card-header text-success"><h1>{% trans "Log in" %}</h1></div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'user_login' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="{{ form.username.id_for_label }}">{{ form.username.label_tag }}</label>
+                            {{ form.username }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form.password.id_for_label }}">{{ form.password.label_tag }}</label>
+                            {{ form.password }}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-sm w-50" style="margin-top:12px;" onclick="showLoadingSpinner()">{% trans "Log in" %}</button>
+                    </form>
+                    <br>
+                    <p>{% trans "Or" %}</p>
+                    <p>{% trans "sign in with" %}:</p>
+                    <button type="button" onclick="location.href='{% provider_login_url 'google' %}'" class="btn btn-success btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                        </svg> {% trans "Sign in with Google" %}
+                    </button>
+                    <!-- Microsoft login button -->
+                    <button type="button" onclick="location.href='{% provider_login_url 'microsoft' %}'" class="btn btn-warning btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-microsoft" viewBox="0 0 16 16">
+                            <path d="M7.462 0H0v7.19h7.462V0zM16 0H8.538v7.19H16V0zM7.462 8.211H0V16h7.462V8.211zm8.538 0H8.538V16H16V8.211z"/>
+                        </svg> {% trans "Sign in with Microsoft" %}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}

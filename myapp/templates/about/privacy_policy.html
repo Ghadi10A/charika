@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="row justify-content-center mt-5">
+    <div class="col-md-7">
+    <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+        <div class="card-body">
+        <h1>{% trans "Privacy Policy" %}</h1>
+
+        <p>{% trans "We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and disclose information about you when you use our website" %}.</p>
+
+        <h2 class="mt-5">{% trans "1. Information We Collect" %}</h2>
+        <p>{% trans "We collect information about you when you use our website, including" %}:</p>
+        <ul>
+            <li>{% trans "Information you provide to us, such as your name and email address when you sign up for an account" %};</li>
+            <li>{% trans "Information we collect automatically when you use our website, such as your IP address and device type" %};</li>
+            <li>{% trans "Information we collect from third-party sources, such as social media platforms" %}.</li>
+        </ul>
+
+        <h2 class="mt-5">{% trans "2. How We Use Your Information" %}</h2>
+        <p>{% trans "We use the information we collect to" %}:</p>
+        <ul>
+            <li>{% trans "Provide and improve our website" %};</li>
+            <li>{% trans "Communicate with you, such as to send you updates and marketing materials" %}</li>
+            <li>{% trans "Customize content and advertising" %};</li>
+            <li>{% trans "Prevent and detect fraud" %};</li>
+            <li>{% trans "Comply with legal obligations" %}.</li>
+        </ul>
+
+        <h2 class="mt-5">{% trans "3. How We Share Your Information" %}</h2>
+        <p>{% trans "We may share your information with" %}:</p>
+        <ul>
+            <li>{% trans "Service providers, such as hosting and email providers" %}</li>
+            <li>{% trans "Third-party partners for marketing and advertising purposes" %}</li>
+            <li>{% trans "Law enforcement agencies or government authorities if required by law" %}</li>
+            <li>{% trans "Other third parties with your consent" %}.</li>
+        </ul>
+
+        <h2 class="mt-5">{% trans "4. Security" %}</h2>
+        <p>{% trans "We take reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or method of electronic storage is completely secure" %}.</p>
+
+        <h2 class="mt-5">{% trans "5. Disclaimer of Liability" %}</h2>
+        <p>{% trans "We do not assume any liability for any unauthorized access to or use of your personal information. We are not responsible for any financial losses or damages resulting from the use of our website or the information provided through our website. By using our website, you assume all risks associated with such use" %}.</p>
+
+        <h2 class="mt-5">{% trans "6. Changes to this Privacy Policy" %}</h2>
+        <p>{% trans "We may update this Privacy Policy from time to time. If we make material changes, we will notify you by posting a notice on our website or sending you an email. Your continued use of our website after any changes indicates your acceptance of the updated Privacy Policy" %}.</p>
+
+        <h2 class="mt-5">{% trans "7. Contact Us" %}</h2>
+        <p>{% trans "If you have any questions about this Privacy Policy or our website, please contact us at" %} <a href="mailto:contact@chatnun.com">contact@chatnun.com</a>.</p>
+    </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+{% endblock %}

@@ -1,0 +1,1500 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-20 13:16-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: myapp/forms.py:16
+msgid "1 Minute"
+msgstr "1 Minute"
+
+#: myapp/forms.py:17
+msgid "5 Minutes"
+msgstr "5 Minutes"
+
+#: myapp/forms.py:18
+msgid "15 Minutes"
+msgstr "15 Minutes"
+
+#: myapp/forms.py:19
+msgid "30 Minutes"
+msgstr "30 Minutes"
+
+#: myapp/forms.py:20
+msgid "1 Hour"
+msgstr "1 Heure"
+
+#: myapp/forms.py:21
+msgid "4 Hours"
+msgstr "4 Heures"
+
+#: myapp/forms.py:22
+msgid "1 Day"
+msgstr "1 Jour"
+
+#: myapp/forms.py:23
+msgid "1 Week"
+msgstr "1 Semaine"
+
+#: myapp/forms.py:24
+msgid "1 Month"
+msgstr "1 Mois"
+
+#: myapp/templates/about/about_us.html:8 myapp/templates/base.html:204
+msgid "About Us"
+msgstr "À Propos de Nous"
+
+#: myapp/templates/about/about_us.html:10
+msgid ""
+"Chatnun is a social media and market predictions platform that offers a "
+"range of tools and features to help users stay informed about the latest "
+"trends and opportunities in the markets. Our platform includes market "
+"scanners, signals, and a chatbot to assist with trading decisions. We are "
+"committed to providing our users with the information and tools they need to "
+"make informed investment decisions"
+msgstr ""
+"Chatnun est une plateforme de médias sociaux et de prévisions de marché qui "
+"offre une gamme d'outils et de fonctionnalités pour aider les utilisateurs à "
+"rester informés des dernières tendances et opportunités sur les marchés. "
+"Notre plateforme comprend des scanners de marché, des signaux et un chatbot "
+"pour aider à la prise de décisions de trading. Nous nous engageons à fournir "
+"à nos utilisateurs les informations et les outils dont ils ont besoin pour "
+"prendre des décisions d'investissement éclairées."
+
+#: myapp/templates/about/about_us.html:12
+msgid "Our Mission"
+msgstr "Notre Mission"
+
+#: myapp/templates/about/about_us.html:13
+msgid ""
+"At Chatnun, our mission is to provide users with a comprehensive and easy-to-"
+"use platform for accessing market data and making informed investment "
+"decisions. We believe that everyone should have access to the same "
+"information and tools that the professionals use, and we are committed to "
+"making this a reality"
+msgstr ""
+"Chez Chatnun, notre mission est de fournir aux utilisateurs une plateforme "
+"complète et facile à utiliser pour accéder aux données de marché et prendre "
+"des décisions d'investissement éclairées. Nous croyons que tout le monde "
+"devrait avoir accès aux mêmes informations et outils que les professionnels, "
+"et nous nous engageons à faire de cette vision une réalité."
+
+#: myapp/templates/about/about_us.html:15
+msgid "Our Features"
+msgstr "Nos Fonctionnalités"
+
+#: myapp/templates/about/about_us.html:17
+msgid ""
+"Market Scanners: Our market scanners help users quickly and easily find "
+"opportunities in the markets, including stocks, currencies, and "
+"cryptocurrencies"
+msgstr ""
+"Scanners de marché : Nos scanners de marché aident les utilisateurs à trouver "
+"rapidement et facilement des opportunités sur les marchés, y compris les "
+"actions, les devises et les crypto-monnaies."
+
+#: myapp/templates/about/about_us.html:18
+msgid ""
+"Market Signals: Our market signals provide users with real-time alerts about "
+"important market events, such as price movements and news events"
+msgstr ""
+"Signaux de marché : Nos signaux de marché fournissent aux utilisateurs des "
+"alertes en temps réel sur les événements importants du marché, tels que les "
+"mouvements de prix et les événements d'actualité."
+
+#: myapp/templates/about/about_us.html:19
+msgid ""
+"Chatbot: Our chatbot is available 24/7 to help users with trading decisions, "
+"answer questions about the markets, and provide insights into market trends "
+"and opportunities"
+msgstr ""
+"Chatbot : Notre chatbot est disponible 24h/24 et 7j/7 pour aider les "
+"utilisateurs dans leurs décisions de trading, répondre aux questions sur les "
+"marchés et fournir des informations sur les tendances et opportunités du "
+"marché."
+
+#: myapp/templates/about/about_us.html:20
+msgid ""
+"Social Media: Our social media platform allows users to connect with other "
+"traders and investors, share ideas and strategies, and stay up-to-date on "
+"the latest market news"
+msgstr ""
+"Médias sociaux : Notre plateforme de médias sociaux permet aux utilisateurs "
+"de se connecter avec d'autres traders et investisseurs, de partager des idées "
+"et des stratégies, et de rester informés des dernières actualités du marché."
+
+#: myapp/templates/about/about_us.html:23
+msgid "Our Co-Founder"
+msgstr "Notre Co-Fondateur"
+
+#: myapp/templates/about/about_us.html:24
+msgid ""
+"Chatnun was founded by Amin Ghadi, a seasoned trader and investor with over "
+"15 years of experience in the financial markets. Amin has a passion for "
+"using technology to help democratize access to market data and trading "
+"tools, and he is committed to making the markets more accessible and "
+"transparent for everyone"
+msgstr ""
+"Chatnun a été fondée par Amin Ghadi, un trader et investisseur chevronné avec "
+"plus de 15 ans d'expérience sur les marchés financiers. Amin a une passion "
+"pour l'utilisation de la technologie afin de démocratiser l'accès aux données "
+"de marché et aux outils de trading, et il s'engage à rendre les marchés plus "
+"accessibles et transparents pour tous."
+#: myapp/templates/about/about_us.html:26
+msgid "Responsible Payment Processing"
+msgstr "Traitement des paiements responsable"
+
+#: myapp/templates/about/about_us.html:27
+msgid ""
+"At Chatnun, we take our responsibility for processing payments seriously. We "
+"use the latest encryption and security technologies to ensure that all "
+"transactions are safe and secure. We also take steps to prevent fraud and "
+"ensure that our users are protected from unauthorized transactions"
+msgstr ""
+"Chez Chatnun, nous prenons notre responsabilité en matière de traitement des paiements très au sérieux. "
+"Nous utilisons les dernières technologies de cryptage et de sécurité pour garantir que toutes "
+"les transactions sont sûres et sécurisées. Nous prenons également des mesures pour prévenir la fraude et "
+"assurer que nos utilisateurs sont protégés contre les transactions non autorisées."
+
+#: myapp/templates/about/about_us.html:29
+msgid "Customer Support"
+msgstr "Support client"
+
+#: myapp/templates/about/about_us.html:30
+msgid ""
+"At Chatnun, we believe that providing excellent customer support is "
+"essential to our mission. We are committed to providing our users with fast "
+"and efficient support, and we are always available to answer questions and "
+"provide assistance. If you have any questions or concerns about our "
+"platform, please contact us at"
+msgstr ""
+"Chez Chatnun, nous croyons que fournir un excellent support client est "
+"essentiel à notre mission. Nous nous engageons à fournir à nos utilisateurs un support rapide "
+"et efficace, et nous sommes toujours disponibles pour répondre à vos questions et "
+"fournir de l'assistance. Si vous avez des questions ou des préoccupations concernant notre "
+"plateforme, veuillez nous contacter à l'adresse suivante"
+
+#: myapp/templates/about/about_us.html:32
+#: myapp/templates/about/contact_us.html:20 myapp/templates/base.html:207
+msgid "Contact Us"
+msgstr "Contactez-nous"
+
+#: myapp/templates/about/about_us.html:33
+msgid ""
+"If you have any questions about Chatnun or would like to learn more about "
+"our platform, please contact us at"
+msgstr ""
+"Si vous avez des questions sur Chatnun ou si vous souhaitez en savoir plus sur "
+"notre plateforme, veuillez nous contacter à l'adresse suivante"
+
+#: myapp/templates/about/contact_us.html:21
+msgid ""
+"Have a question or comment? We'd love to hear from you! Fill out the form "
+"below and we'll get back to you as soon as possible."
+msgstr ""
+"Vous avez une question ou un commentaire ? Nous aimerions avoir de vos nouvelles ! "
+"Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible."
+
+#: myapp/templates/about/contact_us.html:26 myapp/templates/profile.html:99
+msgid "Name"
+msgstr "Nom"
+
+#: myapp/templates/about/contact_us.html:30
+msgid "Email"
+msgstr "Email"
+
+#: myapp/templates/about/contact_us.html:34
+msgid "Message"
+msgstr "Message"
+
+#: myapp/templates/about/privacy_policy.html:8 myapp/templates/base.html:201
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
+
+#: myapp/templates/about/privacy_policy.html:10
+msgid ""
+"We are committed to protecting your privacy. This Privacy Policy explains "
+"how we collect, use, and disclose information about you when you use our "
+"website"
+msgstr ""
+"Nous nous engageons à protéger votre vie privée. Cette politique de confidentialité explique "
+"comment nous collectons, utilisons et divulguons des informations vous concernant lorsque vous utilisez notre "
+"site web"
+
+#: myapp/templates/about/privacy_policy.html:12
+msgid "1. Information We Collect"
+msgstr "1. Informations que nous collectons"
+
+#: myapp/templates/about/privacy_policy.html:13
+msgid "We collect information about you when you use our website, including"
+msgstr "Nous collectons des informations vous concernant lorsque vous utilisez notre site web, y compris"
+
+#: myapp/templates/about/privacy_policy.html:15
+msgid ""
+"Information you provide to us, such as your name and email address when you "
+"sign up for an account"
+msgstr ""
+"Les informations que vous nous fournissez, telles que votre nom et votre adresse e-mail lorsque vous "
+"créez un compte"
+
+#: myapp/templates/about/privacy_policy.html:16
+msgid ""
+"Information we collect automatically when you use our website, such as your "
+"IP address and device type"
+msgstr ""
+"Les informations que nous collectons automatiquement lorsque vous utilisez notre site web, comme votre "
+"adresse IP et le type d'appareil"
+
+#: myapp/templates/about/privacy_policy.html:17
+msgid ""
+"Information we collect from third-party sources, such as social media "
+"platforms"
+msgstr ""
+"Les informations que nous collectons auprès de sources tierces, telles que les plateformes de médias sociaux"
+
+#: myapp/templates/about/privacy_policy.html:20
+msgid "2. How We Use Your Information"
+msgstr "2. Comment nous utilisons vos informations"
+
+#: myapp/templates/about/privacy_policy.html:21
+msgid "We use the information we collect to"
+msgstr "Nous utilisons les informations que nous collectons pour"
+
+#: myapp/templates/about/privacy_policy.html:23
+msgid "Provide and improve our website"
+msgstr "Fournir et améliorer notre site web"
+
+#: myapp/templates/about/privacy_policy.html:24
+msgid ""
+"Communicate with you, such as to send you updates and marketing materials"
+msgstr ""
+"Communiquer avec vous, par exemple pour vous envoyer des mises à jour et du matériel marketing"
+
+#: myapp/templates/about/privacy_policy.html:26
+msgid "Prevent and detect fraud"
+msgstr "Prévenir et détecter la fraude"
+
+#: myapp/templates/about/privacy_policy.html:27
+msgid "Comply with legal obligations"
+msgstr "Respecter les obligations légales"
+
+#: myapp/templates/about/privacy_policy.html:30
+msgid "3. How We Share Your Information"
+msgstr "3. Comment nous partageons vos informations"
+
+#: myapp/templates/about/privacy_policy.html:31
+msgid "We may share your information with"
+msgstr "Nous pouvons partager vos informations avec"
+
+#: myapp/templates/about/privacy_policy.html:33
+msgid "Service providers, such as hosting and email providers"
+msgstr "Fournisseurs de services, tels que les hébergeurs et les fournisseurs de messagerie électronique"
+
+#: myapp/templates/about/privacy_policy.html:34
+msgid "Third-party partners for marketing and advertising purposes"
+msgstr "Partenaires tiers à des fins de marketing et de publicité"
+
+#: myapp/templates/about/privacy_policy.html:35
+msgid "Law enforcement agencies or government authorities if required by law"
+msgstr "Organismes chargés de l'application de la loi ou autorités gouvernementales si la loi l'exige"
+
+#: myapp/templates/about/privacy_policy.html:36
+msgid "Other third parties with your consent"
+msgstr "D'autres tiers avec votre consentement"
+
+#: myapp/templates/about/privacy_policy.html:39
+msgid "4. Security"
+msgstr "4. Sécurité"
+
+#: myapp/templates/about/privacy_policy.html:40
+msgid ""
+"We take reasonable measures to protect your information from unauthorized "
+"access, use, or disclosure. However, no method of transmission over the "
+"internet or method of electronic storage is completely secure"
+msgstr ""
+"Nous prenons des mesures raisonnables pour protéger vos informations contre tout accès, utilisation ou divulgation non autorisés. Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est totalement sécurisée."
+
+#: myapp/templates/about/privacy_policy.html:42
+msgid "5. Disclaimer of Liability"
+msgstr "5. Clause de non-responsabilité"
+
+#: myapp/templates/about/privacy_policy.html:43
+msgid ""
+"We do not assume any liability for any unauthorized access to or use of your "
+"personal information. We are not responsible for any financial losses or "
+"damages resulting from the use of our website or the information provided "
+"through our website. By using our website, you assume all risks associated "
+"with such use"
+msgstr ""
+"Nous n'assumons aucune responsabilité en cas d'accès non autorisé à vos informations personnelles ou de leur utilisation. Nous ne sommes pas responsables des pertes financières ou des dommages résultant de l'utilisation de notre site Web ou des informations fournies par le biais de notre site Web. En utilisant notre site Web, vous assumez tous les risques associés à une telle utilisation."
+
+#: myapp/templates/about/privacy_policy.html:45
+msgid "6. Changes to this Privacy Policy"
+msgstr "6. Modifications de cette politique de confidentialité"
+
+#: myapp/templates/about/privacy_policy.html:46
+msgid ""
+"We may update this Privacy Policy from time to time. If we make material "
+"changes, we will notify you by posting a notice on our website or sending "
+"you an email. Your continued use of our website after any changes indicates "
+"your acceptance of the updated Privacy Policy"
+msgstr ""
+"Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Si nous apportons des modifications importantes, nous vous en informerons en publiant un avis sur notre site Web ou en vous envoyant un e-mail. Votre utilisation continue de notre site Web après toute modification indique votre acceptation de la politique de confidentialité mise à jour."
+
+#: myapp/templates/about/privacy_policy.html:48
+msgid "7. Contact Us"
+msgstr "7. Contactez-nous"
+
+#: myapp/templates/about/privacy_policy.html:49
+msgid ""
+"If you have any questions about this Privacy Policy or our website, please "
+"contact us at"
+msgstr ""
+"Si vous avez des questions concernant cette politique de confidentialité ou notre site Web, veuillez nous contacter à"
+
+#: myapp/templates/about/terms_of_service.html:8
+msgid "Terms of Service"
+msgstr "Conditions d'utilisation"
+
+#: myapp/templates/about/terms_of_service.html:9
+msgid ""
+"Welcome to our website! This website is provided as a service to our users. "
+"Please read these terms and conditions carefully before using our website. "
+"By using our website, you agree to these terms and conditions"
+msgstr ""
+"Bienvenue sur notre site Web ! Ce site Web est fourni en tant que service à nos utilisateurs. Veuillez lire attentivement ces conditions d'utilisation avant d'utiliser notre site Web. En utilisant notre site Web, vous acceptez ces conditions d'utilisation."
+
+#: myapp/templates/about/terms_of_service.html:11
+msgid "1. Use of Our Website"
+msgstr "1. Utilisation de notre site Web"
+
+#: myapp/templates/about/terms_of_service.html:12
+msgid ""
+"You may use our website for lawful purposes only. You may not use our website"
+msgstr ""
+"Vous ne pouvez utiliser notre site Web qu'à des fins légales. Vous n'êtes pas autorisé à utiliser notre site Web"
+#: myapp/templates/about/terms_of_service.html:14
+msgid ""
+"in any way that violates any applicable federal, state, local, or "
+"international law or regulation"
+msgstr ""
+"d'une manière qui viole toute loi ou réglementation fédérale, étatique, locale ou internationale applicable"
+
+#: myapp/templates/about/terms_of_service.html:15
+msgid "to engage in any fraudulent or malicious activity"
+msgstr "pour se livrer à une activité frauduleuse ou malveillante"
+
+#: myapp/templates/about/terms_of_service.html:16
+msgid ""
+"to transmit any advertising or promotional material without our prior "
+"written consent"
+msgstr ""
+"pour transmettre tout matériel publicitaire ou promotionnel sans notre consentement écrit préalable"
+
+#: myapp/templates/about/terms_of_service.html:17
+msgid ""
+"to impersonate or attempt to impersonate us, our employees, another user, or "
+"any other person or entity"
+msgstr ""
+"pour se faire passer pour nous, nos employés, un autre utilisateur ou toute autre personne ou entité"
+
+#: myapp/templates/about/terms_of_service.html:18
+msgid ""
+"to interfere with or disrupt the operation of our website or servers or "
+"networks connected to our website"
+msgstr ""
+"pour perturber le fonctionnement de notre site web, de nos serveurs ou des réseaux connectés à notre site web"
+
+#: myapp/templates/about/terms_of_service.html:18
+#: myapp/templates/about/terms_of_service.html:30
+msgid "or"
+msgstr "ou"
+
+#: myapp/templates/about/terms_of_service.html:19
+msgid ""
+"to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or "
+"discriminate based on gender, sexual orientation, religion, ethnicity, race, "
+"age, national origin, or disability"
+msgstr ""
+"pour harceler, maltraiter, insulter, nuire, diffamer, calomnier, dénigrer, intimider ou discriminer en fonction du sexe, de l'orientation sexuelle, de la religion, de l'origine ethnique, de la race, de l'âge, de l'origine nationale ou du handicap"
+
+#: myapp/templates/about/terms_of_service.html:22
+msgid "2. Prévisions de marché et conseils en investissement"
+msgstr ""
+
+#: myapp/templates/about/terms_of_service.html:23
+msgid ""
+"The market predictions and investment advice provided on our website are for "
+"informational purposes only and should not be construed as financial or "
+"investment advice. You should consult a qualified professional advisor "
+"before making any investment decisions"
+msgstr ""
+"Les prévisions de marché et les conseils en investissement fournis sur notre site web sont uniquement à titre informatif et ne doivent pas être interprétés comme des conseils financiers ou en investissement. Vous devriez consulter un conseiller professionnel qualifié avant de prendre toute décision d'investissement"
+
+#: myapp/templates/about/terms_of_service.html:25
+msgid "3. Contenu de l'utilisateur"
+msgstr ""
+
+#: myapp/templates/about/terms_of_service.html:26
+msgid ""
+"You are solely responsible for any content that you post or transmit on our "
+"website. You agree not to post or transmit any content that is"
+msgstr ""
+"Vous êtes seul responsable du contenu que vous publiez ou transmettez sur notre site web. Vous acceptez de ne pas publier ou transmettre de contenu qui est"
+
+#: myapp/templates/about/terms_of_service.html:28
+msgid ""
+"unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, "
+"obscene, libelous, invasive of another's privacy, or hateful"
+msgstr ""
+"illégal, nocif, menaçant, abusif, harcelant, diffamatoire, vulgaire, obscène, diffamatoire, attentatoire à la vie privée d'autrui ou haineux"
+
+#: myapp/templates/about/terms_of_service.html:29
+msgid "contains any virus, worm, Trojan horse, or other harmful component"
+msgstr "contient un virus, un ver, un cheval de Troie ou tout autre composant nuisible"
+
+#: myapp/templates/about/terms_of_service.html:30
+msgid ""
+"infringes any intellectual property right or other proprietary right of any "
+"third party"
+msgstr ""
+"viole tout droit de propriété intellectuelle ou autre droit de propriété d'un tiers"
+
+#: myapp/templates/about/terms_of_service.html:31
+msgid ""
+"contains any advertising or promotional material without our prior written "
+"content"
+msgstr ""
+"contient toute publicité ou matériel promotionnel sans notre consentement écrit préalable"
+
+#: myapp/templates/about/terms_of_service.html:33
+msgid ""
+"We reserve the right to remove any user content that violates these terms "
+"and conditions or for any other reason in our sole discretion"
+msgstr ""
+"Nous nous réservons le droit de supprimer tout contenu d'utilisateur qui enfreint ces termes "
+"et conditions ou pour toute autre raison à notre seule discrétion"
+
+#: myapp/templates/about/terms_of_service.html:35
+msgid "4. Disclaimer of Warranties"
+msgstr "4. Avertissement de garanties"
+
+#: myapp/templates/about/terms_of_service.html:36
+msgid ""
+"Our website is provided on an as is and as available basis. We make no "
+"representations or warranties of any kind, express or implied, as to the "
+"operation of our website or the information, content, materials, or products "
+"included on our website. You expressly agree that your use of our website is "
+"at your sole risk"
+msgstr ""
+"Notre site Web est fourni tel quel et tel que disponible. Nous ne faisons aucune "
+"représentation ou garantie d'aucune sorte, expresse ou implicite, quant au "
+"fonctionnement de notre site Web ou aux informations, contenus, matériaux ou produits "
+"inclus sur notre site Web. Vous convenez expressément que votre utilisation de notre site Web est "
+"à vos propres risques"
+
+#: myapp/templates/about/terms_of_service.html:38
+msgid "5. Limitation of Liability"
+msgstr "5. Limitation de responsabilité"
+
+#: myapp/templates/about/terms_of_service.html:39
+msgid ""
+"In no event shall we be liable for any direct, indirect, punitive, "
+"incidental, special, or consequential damages arising out of or in any way "
+"connected with the use of our website, whether based on contract, tort, "
+"strict liability, or any other theory of liability, even if we have been "
+"advised of the possibility"
+msgstr ""
+"En aucun cas, nous ne serons responsables de tout dommage direct, indirect, punitif, "
+"accessoire, spécial ou consécutif découlant de ou lié de quelque manière que ce soit "
+"à l'utilisation de notre site Web, que ce soit sur la base d'un contrat, d'un délit, "
+"d'une responsabilité stricte ou de toute autre théorie de responsabilité, même si nous avons été "
+"avertis de la possibilité"
+
+#: myapp/templates/about/terms_of_service.html:40
+msgid "6. Indemnification"
+msgstr "6. Indemnisation"
+
+#: myapp/templates/about/terms_of_service.html:41
+msgid ""
+"You agree to indemnify and hold us and our affiliates, officers, agents, and "
+"employees harmless from any claim, demand, or damage, including reasonable "
+"attorneys' fees, arising out of or in connection with your use of our "
+"website or your breach of these terms and conditions"
+msgstr ""
+"Vous acceptez d'indemniser et de tenir indemnes nous-mêmes et nos affiliés, officiers, agents et "
+"employés de toute réclamation, demande ou dommage, y compris les frais d'avocat raisonnables, "
+"découlant de votre utilisation de notre site Web ou de votre violation de ces termes et conditions"
+
+#: myapp/templates/about/terms_of_service.html:43
+msgid "7. Modifications to Our Website and Terms of Service"
+msgstr "7. Modifications de notre site Web et des conditions d'utilisation"
+
+#: myapp/templates/about/terms_of_service.html:44
+msgid ""
+"We reserve the right to modify or discontinue our website, or any portion "
+"thereof, with or without notice to you. We may also change these terms and "
+"conditions from time to time without notice to you. By continuing to use our "
+"website after any modifications to these terms and conditions, you agree to "
+"be bound by such modifications"
+msgstr ""
+"Nous nous réservons le droit de modifier ou de cesser notre site Web, ou toute partie "
+"de celui-ci, avec ou sans préavis. Nous pouvons également modifier ces termes et "
+"conditions de temps à autre sans préavis. En continuant à utiliser notre "
+"site Web après toute modification de ces termes et conditions, vous acceptez "
+"d'être lié par de telles modifications"
+
+#: myapp/templates/about/terms_of_service.html:46
+msgid "8. Governing Law and Jurisdiction"
+msgstr "8. Loi applicable et juridiction"
+
+#: myapp/templates/about/terms_of_service.html:47
+msgid ""
+"These terms and conditions shall be governed by and construed in accordance "
+"with the laws of the state of California, without regard to its conflicts of "
+"law principles. Any legal action or proceeding arising out of or relating to "
+"these terms and conditions or your use of our website shall be brought "
+"exclusively in a state or federal court located in San Francisco, California"
+msgstr ""
+"Ces termes et conditions seront régis et interprétés conformément "
+"aux lois de l'État de Californie, sans égard à ses principes de conflits "
+"de lois. Toute action en justice découlant de ou en relation avec "
+"ces termes et conditions ou votre utilisation de notre site Web sera portée "
+"exclusivement devant un tribunal d'État ou fédéral situé à San Francisco, en Californie"
+
+#: myapp/templates/about/terms_of_service.html:49
+msgid "9. Contact Us"
+msgstr "9. Contactez-nous"
+
+#: myapp/templates/about/terms_of_service.html:50
+msgid ""
+"If you have any questions about these terms and conditions or our website, "
+"please contact us at"
+msgstr ""
+"Si vous avez des questions concernant ces termes et conditions ou notre site Web, "
+"veuillez nous contacter à"
+
+#: myapp/templates/account/login.html:40 myapp/templates/account/login.html:45
+#: myapp/templates/auth/login.html:40 myapp/templates/auth/login.html:45
+#: myapp/templates/base.html:183
+msgid "Log in"
+msgstr "Connexion"
+
+#: myapp/templates/auth/signup.html:45 myapp/templates/base.html:184
+msgid "Sign up"
+msgstr "S'inscrire"
+
+#: myapp/templates/account/signup.html:41 myapp/templates/auth/signup.html:41
+msgid "*By Register You Accept our Terms and Policies"
+msgstr "*En vous inscrivant, vous acceptez nos conditions et politiques"
+
+#: myapp/templates/auth/account_activated.html:7
+msgid "Account Activated"
+msgstr "Compte activé"
+
+#: myapp/templates/auth/account_activated.html:10
+msgid "Verify your email"
+msgstr "Vérifiez votre e-mail"
+
+#: myapp/templates/auth/account_activated.html:11
+msgid "Dear"
+msgstr "Cher"
+
+#: myapp/templates/auth/account_activated.html:12
+msgid "Please click on the following link to verify your email address"
+msgstr "Veuillez cliquer sur le lien suivant pour vérifier votre adresse e-mail"
+
+#: myapp/templates/auth/account_activated.html:14
+msgid "If you did not request this verification, please ignore this email"
+msgstr "Si vous n'avez pas demandé cette vérification, veuillez ignorer cet e-mail"
+
+#: myapp/templates/auth/account_activated.html:15
+msgid "Thank you for using our service"
+msgstr "Merci d'utiliser notre service"
+
+#: myapp/templates/auth/email_verification_sent.html:8
+msgid "Verify Your Email Address"
+msgstr "Vérifiez votre adresse e-mail"
+
+#: myapp/templates/auth/email_verification_sent.html:11
+msgid ""
+"We've sent an email to your email address. Please follow the link in the "
+"email to verify your account"
+msgstr ""
+"Nous avons envoyé un e-mail à votre adresse e-mail. Veuillez suivre le lien dans l'e-mail pour vérifier votre compte"
+
+#: myapp/templates/auth/email_verification_sent.html:13
+msgid "Verification email has been resent"
+msgstr "L'e-mail de vérification a été renvoyé"
+
+#: myapp/templates/auth/email_verification_sent.html:15
+msgid "Didn't receive an email?"
+msgstr "Vous n'avez pas reçu d'e-mail ?"
+
+#: myapp/templates/auth/email_verification_sent.html:15
+msgid "Resend verification email"
+msgstr "Renvoyer l'e-mail de vérification"
+
+#: myapp/templates/auth/email_verification_sent.html:17
+#: myapp/templates/base.html:178
+msgid "log out"
+msgstr "Se déconnecter"
+
+#: myapp/templates/auth/login.html:48
+msgid "Or"
+msgstr "Ou"
+
+#: myapp/templates/auth/login.html:49
+msgid "sign in with"
+msgstr "se connecter avec"
+
+#: myapp/templates/auth/login.html:53
+msgid "Sign in with Google"
+msgstr "Connectez-vous avec Google"
+
+#: myapp/templates/auth/login.html:59
+msgid "Sign in with Microsoft"
+msgstr "Connectez-vous avec Microsoft"
+
+#: myapp/templates/base.html:14
+msgid "ChatNun | App"
+msgstr "ChatNun | Application"
+
+#: myapp/templates/base.html:60
+msgid "Home"
+msgstr "Accueil"
+
+#: myapp/templates/base.html:63 myapp/templates/prediction_results.html:143
+msgid "Signal"
+msgstr "Signal"
+
+#: myapp/templates/base.html:66
+msgid "Scanner"
+msgstr "Scanner"
+
+#: myapp/templates/base.html:70 myapp/templates/base.html:73
+msgid "ChatBot"
+msgstr "ChatBot"
+
+#: myapp/templates/base.html:74
+msgid "ChatBotTrade"
+msgstr "ChatBotTrade"
+
+#: myapp/templates/base.html:132
+msgid "View All"
+msgstr "Voir tout"
+
+#: myapp/templates/base.html:175
+msgid "Account"
+msgstr "Compte"
+
+#: myapp/templates/base.html:176 myapp/templates/notifications.html:87
+msgid "Messages"
+msgstr "Messages"
+
+#: myapp/templates/base.html:198
+msgid "Terms of Use"
+msgstr "Conditions d'utilisation"
+
+#: myapp/templates/base.html:217
+msgid "Switch"
+msgstr "Changer"
+
+#: myapp/templates/base.html:222
+msgid "Copyright"
+msgstr "Droit d'auteur"
+
+#: myapp/templates/base.html:222
+msgid "2023 All Rights Reserved"
+msgstr "2023 Tous droits réservés"
+
+#: myapp/templates/chat/group_chat.html:68
+#: myapp/templates/chat/message_thread.html:68
+#: myapp/templates/chat/saved_conversations.html:11
+#: myapp/templates/chatbot/chatbot.html:57
+#: myapp/templates/chatbot/chatbotTrade.html:30
+#: myapp/templates/chatbot/chatbotTrade.html:61
+#: myapp/templates/modals/search.html:74
+msgid "Saved Conversations"
+msgstr "Conversations enregistrées"
+
+#: myapp/templates/chat/group_chat.html:132
+#: myapp/templates/chat/message_thread.html:131
+msgid "No messages yet"
+msgstr "Aucun message pour le moment"
+
+#: myapp/templates/chat/saved_conversations.html:16
+#: myapp/templates/group/group_detail.html:92 myapp/templates/home.html:99
+#: myapp/templates/modals/search.html:71 myapp/templates/results_search.html:46
+msgid "Search"
+msgstr "Rechercher"
+
+#: myapp/templates/chat/saved_conversations.html:32
+msgid "Unread"
+msgstr "Non lu"
+
+#: myapp/templates/chat/saved_conversations.html:54
+msgid "No results found"
+msgstr "Aucun résultat trouvé"
+
+#: myapp/templates/chat/saved_conversations.html:58
+msgid "Select a conversation to view messages"
+msgstr "Sélectionnez une conversation pour voir les messages"
+
+#: myapp/templates/chat/user_list.html:11
+msgid "Online"
+msgstr "En ligne"
+
+#: myapp/templates/chat/user_list.html:13
+msgid "Offline"
+msgstr "Hors ligne"
+
+#: myapp/templates/chatbot/chatbot.html:30
+#: myapp/templates/chatbot/chatbotTrade.html:38
+msgid "Chatbot"
+msgstr "Chatbot"
+
+#: myapp/templates/chatbot/chatbot.html:67
+#: myapp/templates/chatbot/chatbotTrade.html:72
+#: myapp/templates/group/group_detail.html:164
+#: myapp/templates/modals/delete_comment.html:57
+#: myapp/templates/modals/delete_group.html:12
+#: myapp/templates/modals/delete_post.html:57
+#: myapp/templates/profile.html:128
+msgid "Delete"
+msgstr "Supprimer"
+
+#: myapp/templates/chatbot/chatbotTrade.html:36
+msgid "You"
+msgstr "Vous"
+
+#: myapp/templates/chatbot/chatbotTrade.html:62
+msgid "Start New Conversation"
+msgstr "Démarrer une nouvelle conversation"
+
+#: myapp/templates/choose_plan.html:5
+msgid "Choose a Plan"
+msgstr "Choisissez un plan"
+
+#: myapp/templates/choose_plan.html:6
+msgid "Select a subscription plan to activate your account"
+msgstr "Sélectionnez un plan d'abonnement pour activer votre compte"
+
+#: myapp/templates/choose_plan.html:11
+#: myapp/templates/get_started.html:88
+msgid "3 Months"
+msgstr "3 mois"
+
+#: myapp/templates/choose_plan.html:14
+msgid "$18"
+msgstr "18 $"
+
+#: myapp/templates/choose_plan.html:16
+#: myapp/templates/choose_plan.html:32
+#: myapp/templates/choose_plan.html:48
+#: myapp/templates/get_started.html:93
+#: myapp/templates/get_started.html:109
+#: myapp/templates/get_started.html:125
+msgid "Access to all features"
+msgstr "Accès à toutes les fonctionnalités"
+
+#: myapp/templates/choose_plan.html:17
+#: myapp/templates/choose_plan.html:33
+#: myapp/templates/choose_plan.html:49
+#: myapp/templates/get_started.html:94
+#: myapp/templates/get_started.html:110
+#: myapp/templates/get_started.html:126
+msgid "Free support"
+msgstr "Assistance gratuite"
+
+#: myapp/templates/choose_plan.html:18
+#: myapp/templates/choose_plan.html:34
+#: myapp/templates/choose_plan.html:50
+#: myapp/templates/get_started.html:95
+#: myapp/templates/get_started.html:111
+#: myapp/templates/get_started.html:127
+msgid "Cancel anytime"
+msgstr "Annulez à tout moment"
+
+#: myapp/templates/choose_plan.html:20
+#: myapp/templates/choose_plan.html:36
+#: myapp/templates/choose_plan.html:52
+#: myapp/templates/get_started.html:97
+#: myapp/templates/get_started.html:113
+#: myapp/templates/get_started.html:129
+msgid "Subscribe now"
+msgstr "Abonnez-vous maintenant"
+
+#: myapp/templates/choose_plan.html:27
+#: myapp/templates/get_started.html:104
+msgid "6 Months"
+msgstr "6 mois"
+
+#: myapp/templates/choose_plan.html:30 myapp/templates/get_started.html:123
+msgid "$29"
+msgstr "$29"
+
+#: myapp/templates/choose_plan.html:43 myapp/templates/get_started.html:120
+msgid "1 Year"
+msgstr "1 an"
+
+#: myapp/templates/choose_plan.html:46
+msgid "$49"
+msgstr "$49"
+
+#: myapp/templates/get_started.html:36
+msgid "Predict Markets with Machine Learning"
+msgstr "Prédire les marchés avec l'apprentissage automatique"
+
+#: myapp/templates/get_started.html:37
+msgid ""
+"Our app uses advanced machine learning algorithms to provide accurate market "
+"predictions"
+msgstr ""
+"Notre application utilise des algorithmes d'apprentissage automatique avancés pour fournir des prédictions de marché précises"
+
+#: myapp/templates/get_started.html:46
+msgid "Real-time Scanners"
+msgstr "Scanners en temps réel"
+
+#: myapp/templates/get_started.html:47
+msgid ""
+"Our app includes real-time scanners to keep you up-to-date on market trends"
+msgstr ""
+"Notre application comprend des scanners en temps réel pour vous tenir informé des tendances du marché"
+
+#: myapp/templates/get_started.html:56
+msgid "Free Signup for"
+msgstr "Inscription gratuite pour"
+
+#: myapp/templates/get_started.html:57
+msgid "Chatbot and Social Capabilities"
+msgstr "Chatbot et fonctionnalités sociales"
+
+#: myapp/templates/get_started.html:58
+msgid ""
+"Our app includes a chatbot for personalized predictions and social "
+"capabilities to connect with other users"
+msgstr ""
+"Notre application comprend un chatbot pour des prédictions personnalisées et des fonctionnalités sociales pour se connecter avec d'autres utilisateurs"
+
+#: myapp/templates/get_started.html:79
+msgid "Welcome to Chatnun App"
+msgstr "Bienvenue sur l'application Chatnun"
+
+#: myapp/templates/get_started.html:80
+msgid ""
+"Use our machine learning model to predict the movement of financial "
+"instruments"
+msgstr ""
+"Utilisez notre modèle d'apprentissage automatique pour prédire le mouvement des instruments financiers"
+
+#: myapp/templates/get_started.html:82
+msgid "Select an instrument from the dropdown above and click Predict to see the result"
+msgstr "Sélectionnez un instrument dans le menu déroulant ci-dessus et cliquez sur Prédire pour voir le résultat"
+
+#: myapp/templates/get_started.html:91
+msgid "$9"
+msgstr "$9"
+
+#: myapp/templates/get_started.html:107
+msgid "$19"
+msgstr "$19"
+
+#: myapp/templates/get_started.html:141
+msgid "About the Model"
+msgstr "À propos du modèle"
+
+#: myapp/templates/get_started.html:142
+msgid ""
+"Our model uses advanced machine learning algorithms to predict the movement "
+"of financial instruments based on historical data and market conditions"
+msgstr ""
+"Notre modèle utilise des algorithmes d'apprentissage automatique avancés pour prédire le mouvement des instruments financiers en se basant sur des données historiques et les conditions du marché"
+
+#: myapp/templates/get_started.html:150
+msgid "Supported Instruments"
+msgstr "Instruments pris en charge"
+
+#: myapp/templates/get_started.html:151
+msgid ""
+"Our model currently supports prediction for the following instruments: "
+"NASDAQ 100, Amazon, Apple, Tesla, Google, Meta, Gold, Oil, BTC and forex"
+msgstr ""
+"Notre modèle prend actuellement en charge la prédiction des instruments suivants : "
+"NASDAQ 100, Amazon, Apple, Tesla, Google, Meta, Gold, Oil, BTC et forex"
+
+#: myapp/templates/get_started.html:159
+msgid "Accuracy"
+msgstr "Précision"
+
+#: myapp/templates/get_started.html:160
+msgid ""
+"Our model has a high accuracy rate and is constantly being improved to "
+"provide the most reliable predictions possible. and always in developement"
+msgstr ""
+"Notre modèle a un taux de précision élevé et est constamment amélioré pour fournir les prédictions les plus fiables possibles. et toujours en développement"
+
+#: myapp/templates/group/group_detail.html:26
+#: myapp/templates/modals/join_requests.html:17
+#: myapp/templates/post/group_post.html:26
+msgid "Admin"
+msgstr "Administrateur"
+
+#: myapp/templates/group/group_detail.html:32
+#: myapp/templates/modals/delete_group.html:7
+#: myapp/templates/modals/join_requests.html:27
+#: myapp/templates/post/group_post.html:32
+msgid "Delete Group"
+msgstr "Supprimer le groupe"
+
+#: myapp/templates/group/group_detail.html:34
+#: myapp/templates/modals/join_requests.html:29
+#: myapp/templates/post/group_post.html:34
+msgid "View join requests"
+msgstr "Voir les demandes de participation"
+
+#: myapp/templates/group/group_detail.html:36
+#: myapp/templates/post/group_post.html:36
+msgid "Update Group"
+msgstr "Mettre à jour le groupe"
+
+#: myapp/templates/group/group_detail.html:38
+#: myapp/templates/group/group_detail.html:43
+#: myapp/templates/post/group_post.html:38
+#: myapp/templates/post/group_post.html:43
+msgid "Group Chat"
+msgstr "Discussion de groupe"
+
+#: myapp/templates/group/group_detail.html:40
+#: myapp/templates/modals/join_requests.html:31
+#: myapp/templates/post/group_post.html:40
+msgid "Join group"
+msgstr "Rejoindre le groupe"
+
+#: myapp/templates/group/group_detail.html:42
+#: myapp/templates/modals/join_requests.html:33
+#: myapp/templates/post/group_post.html:42
+msgid "Leave group"
+msgstr "Quitter le groupe"
+
+#: myapp/templates/group/group_detail.html:51
+#: myapp/templates/modals/join_requests.html:42
+#: myapp/templates/notifications.html:61 myapp/templates/notifications.html:69
+#: myapp/templates/post/group_post.html:51
+#: myapp/templates/post/show_post.html:58
+#: myapp/templates/post/show_post.html:65 myapp/templates/profile.html:57
+#: myapp/templates/profile.html:65
+msgid "Members"
+msgstr "Membres"
+
+#: myapp/templates/group/group_detail.html:67
+#: myapp/templates/modals/join_requests.html:58
+#: myapp/templates/post/group_post.html:67
+msgid "No members yet"
+msgstr "Aucun membre pour le moment"
+
+#: myapp/templates/group/group_detail.html:125 myapp/templates/home.html:133
+#: myapp/templates/profile.html:105
+msgid "Image"
+msgstr "Image"
+
+#: myapp/templates/group/group_detail.html:130 myapp/templates/home.html:138
+msgid "Video"
+msgstr "Vidéo"
+
+#: myapp/templates/group/group_detail.html:135 myapp/templates/home.html:143
+msgid "Sound"
+msgstr "Son"
+
+#: myapp/templates/group/group_detail.html:163
+#: myapp/templates/post/group_post.html:236
+#: myapp/templates/post/show_post.html:223 myapp/templates/profile.html:127
+msgid "Edit"
+msgstr "Modifier"
+
+#: myapp/templates/group/group_detail.html:173 myapp/templates/home.html:168
+#: myapp/templates/post/group_post.html:96
+#: myapp/templates/post/show_post.html:83 myapp/templates/profile.html:137
+msgid "Posted"
+msgstr "Publié"
+
+#: myapp/templates/group/group_detail.html:173 myapp/templates/home.html:168
+#: myapp/templates/post/group_post.html:96
+#: myapp/templates/post/show_post.html:83 myapp/templates/profile.html:137
+msgid "ago"
+msgstr "il y a"
+
+#: myapp/templates/group/group_detail.html:222 myapp/templates/home.html:220
+#: myapp/templates/post/group_post.html:144
+#: myapp/templates/post/show_post.html:132 myapp/templates/profile.html:186
+msgid "Reactions"
+msgstr "Réactions"
+
+#: myapp/templates/group/group_detail.html:230 myapp/templates/home.html:229
+#: myapp/templates/post/group_post.html:152
+#: myapp/templates/post/show_post.html:140 myapp/templates/profile.html:194
+msgid "No reactions yet. 0 Reactions"
+msgstr "Aucune réaction pour le moment. 0 Réactions"
+
+#: myapp/templates/group/group_detail.html:239 myapp/templates/home.html:241
+#: myapp/templates/post/group_post.html:163
+#: myapp/templates/post/show_post.html:149
+msgid "You've already reacted to this post!"
+msgstr "Vous avez déjà réagi à cette publication !"
+#: myapp/templates/group/group_detail.html:280 myapp/templates/home.html:282
+#: myapp/templates/post/group_post.html:206
+#: myapp/templates/post/show_post.html:192 myapp/templates/profile.html:202
+msgid "Comments"
+msgstr "Commentaires"
+
+#: myapp/templates/group/group_detail.html:286 myapp/templates/home.html:284
+#: myapp/templates/profile.html:206
+msgid "View Post"
+msgstr "Voir la publication"
+
+#: myapp/templates/group/group_detail.html:292 myapp/templates/profile.html:212
+#: myapp/templates/public_profile.html:68
+msgid "No posts yet"
+msgstr "Aucune publication pour le moment"
+
+#: myapp/templates/group/group_detail.html:304
+#: myapp/templates/modals/delete_comment.html:38
+#: myapp/templates/modals/delete_post.html:38
+#: myapp/templates/modals/edit_comment.html:38
+#: myapp/templates/modals/edit_post.html:38
+#: myapp/templates/post/group_post.html:268 myapp/templates/profile.html:39
+#: myapp/templates/profile.html:225
+msgid "Update Profile"
+msgstr "Mettre à jour le profil"
+
+#: myapp/templates/group/group_detail.html:312
+#: myapp/templates/modals/edit_comment.html:57
+#: myapp/templates/post/group_post.html:276 myapp/templates/profile.html:233
+msgid "Save"
+msgstr "Enregistrer"
+
+#: myapp/templates/home.html:28 myapp/templates/modals/choose_plan.html:21
+#: myapp/templates/modals/delete_account.html:22
+#: myapp/templates/modals/delete_comment.html:22
+#: myapp/templates/modals/delete_post.html:22
+#: myapp/templates/modals/edit_comment.html:22
+#: myapp/templates/modals/edit_post.html:22
+#: myapp/templates/notifications.html:27 myapp/templates/post/show_post.html:28
+#: myapp/templates/predict_signal.html:20
+#: myapp/templates/prediction_results.html:20 myapp/templates/profile.html:23
+#: myapp/templates/public_profile.html:20
+#: myapp/templates/results_search.html:21 myapp/templates/scanner.html:21
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: myapp/templates/home.html:30 myapp/templates/modals/choose_plan.html:23
+#: myapp/templates/modals/delete_account.html:24
+#: myapp/templates/modals/delete_comment.html:24
+#: myapp/templates/modals/delete_post.html:24
+#: myapp/templates/modals/edit_comment.html:24
+#: myapp/templates/modals/edit_post.html:24
+#: myapp/templates/notifications.html:29 myapp/templates/post/show_post.html:30
+#: myapp/templates/predict_signal.html:22
+#: myapp/templates/prediction_results.html:22 myapp/templates/profile.html:25
+#: myapp/templates/public_profile.html:22
+#: myapp/templates/results_search.html:23 myapp/templates/scanner.html:24
+msgid "Bio"
+msgstr "Biographie"
+
+#: myapp/templates/home.html:33 myapp/templates/modals/choose_plan.html:26
+#: myapp/templates/modals/delete_account.html:27
+#: myapp/templates/modals/delete_comment.html:27
+#: myapp/templates/modals/delete_post.html:27
+#: myapp/templates/modals/edit_comment.html:27
+#: myapp/templates/modals/edit_post.html:27
+#: myapp/templates/notifications.html:32 myapp/templates/post/show_post.html:33
+#: myapp/templates/predict_signal.html:25
+#: myapp/templates/prediction_results.html:25 myapp/templates/profile.html:28
+#: myapp/templates/public_profile.html:25
+#: myapp/templates/results_search.html:26 myapp/templates/scanner.html:27
+msgid "Birthdate"
+msgstr "Date de naissance"
+
+#: myapp/templates/home.html:36 myapp/templates/modals/choose_plan.html:29
+#: myapp/templates/modals/delete_account.html:30
+#: myapp/templates/modals/delete_comment.html:30
+#: myapp/templates/modals/delete_post.html:30
+#: myapp/templates/modals/edit_comment.html:30
+#: myapp/templates/modals/edit_post.html:30
+#: myapp/templates/notifications.html:35 myapp/templates/post/show_post.html:36
+#: myapp/templates/predict_signal.html:28
+#: myapp/templates/prediction_results.html:28 myapp/templates/profile.html:31
+#: myapp/templates/public_profile.html:28
+#: myapp/templates/results_search.html:29 myapp/templates/scanner.html:30
+msgid "City"
+msgstr "Ville"
+
+#: myapp/templates/home.html:39 myapp/templates/modals/choose_plan.html:32
+#: myapp/templates/modals/delete_account.html:33
+#: myapp/templates/modals/delete_comment.html:33
+#: myapp/templates/modals/delete_post.html:33
+#: myapp/templates/modals/edit_comment.html:33
+#: myapp/templates/modals/edit_post.html:33
+#: myapp/templates/notifications.html:38 myapp/templates/post/show_post.html:39
+#: myapp/templates/predict_signal.html:31
+#: myapp/templates/prediction_results.html:31 myapp/templates/profile.html:34
+#: myapp/templates/public_profile.html:31
+#: myapp/templates/results_search.html:32 myapp/templates/scanner.html:33
+msgid "Location"
+msgstr "Emplacement"
+
+#: myapp/templates/home.html:42 myapp/templates/notifications.html:41
+#: myapp/templates/post/show_post.html:42
+msgid "Followers"
+msgstr "Abonnés"
+
+#: myapp/templates/home.html:45 myapp/templates/notifications.html:44
+#: myapp/templates/post/show_post.html:45
+msgid "Following"
+msgstr "Abonnements"
+
+#: myapp/templates/home.html:53 myapp/templates/post/show_post.html:51
+#: myapp/templates/profile.html:49 myapp/templates/results_search.html:94
+msgid "Groups"
+msgstr "Groupes"
+
+#: myapp/templates/modals/choose_plan.html:50
+msgid "Choose a Subscription Plan"
+msgstr "Choisissez un plan d'abonnement"
+
+#: myapp/templates/modals/choose_plan.html:60
+msgid "Subscribe"
+msgstr "S'abonner"
+
+#: myapp/templates/modals/delete_account.html:51
+#: myapp/templates/modals/delete_account.html:57
+#: myapp/templates/profile.html:42
+msgid "Delete Account"
+msgstr "Supprimer le compte"
+
+#: myapp/templates/modals/delete_account.html:54
+msgid "Are you sure you want to delete your account?"
+msgstr "Êtes-vous sûr de vouloir supprimer votre compte ?"
+
+#: myapp/templates/modals/delete_account.html:58
+#: myapp/templates/modals/delete_comment.html:58
+#: myapp/templates/modals/delete_group.html:13
+#: myapp/templates/modals/delete_post.html:58
+msgid "Cancel"
+msgstr "Annuler"
+
+#: myapp/templates/modals/delete_comment.html:51
+#: myapp/templates/post/group_post.html:237
+#: myapp/templates/post/show_post.html:224
+msgid "Delete Comment"
+msgstr "Supprimer le commentaire"
+
+#: myapp/templates/modals/delete_comment.html:54
+msgid "Are you sure you want to delete this comment?"
+msgstr "Êtes-vous sûr de vouloir supprimer ce commentaire ?"
+
+#: myapp/templates/modals/delete_group.html:9
+msgid "Are you sure you want to delete the group"
+msgstr "Êtes-vous sûr de vouloir supprimer le groupe"
+
+#: myapp/templates/modals/delete_post.html:51
+msgid "Delete Post"
+msgstr "Supprimer la publication"
+
+#: myapp/templates/modals/delete_post.html:54
+msgid "Are you sure you want to delete this post?"
+msgstr "Êtes-vous sûr de vouloir supprimer cette publication ?"
+
+#: myapp/templates/modals/edit_comment.html:51
+msgid "Edit Comment"
+msgstr "Modifier le commentaire"
+
+#: myapp/templates/modals/edit_post.html:51
+msgid "Edit Post"
+msgstr "Modifier la publication"
+
+#: myapp/templates/modals/edit_post.html:57
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#: myapp/templates/modals/join_requests.html:73
+msgid "has requested to join the group on"
+msgstr "a demandé à rejoindre le groupe le"
+
+#: myapp/templates/modals/join_requests.html:76
+msgid "Approve"
+msgstr "Approuver"
+
+#: myapp/templates/modals/join_requests.html:77
+msgid "Deny"
+msgstr "Refuser"
+
+#: myapp/templates/modals/join_requests.html:83
+msgid "No join requests found"
+msgstr "Aucune demande d'adhésion trouvée"
+
+#: myapp/templates/modals/search.html:109
+#: myapp/templates/results_search.html:70
+msgid "Search Results"
+msgstr "Résultats de recherche"
+
+#: myapp/templates/modals/search.html:119
+#: myapp/templates/modals/search.html:147
+#: myapp/templates/results_search.html:79
+msgid "No users found"
+msgstr "Aucun utilisateur trouvé"
+
+#: myapp/templates/modals/search.html:134
+msgid "No messages"
+msgstr "Aucun message"
+
+#: myapp/templates/modals/search.html:139
+#: myapp/templates/modals/search.html:143
+msgid "No threads found"
+msgstr "Aucun fil de discussion trouvé"
+
+#: myapp/templates/modals/search.html:149
+msgid "No users or threads found"
+msgstr "Aucun utilisateur ou fil de discussion trouvé"
+
+#: myapp/templates/notifications.html:68 myapp/templates/profile.html:64
+msgid "admin"
+msgstr "administrateur"
+
+#: myapp/templates/notifications.html:105
+msgid "No message notifications"
+msgstr "Aucune notification de message"
+
+#: myapp/templates/notifications.html:124
+msgid "No post notifications"
+msgstr "Aucune notification de publication"
+
+#: myapp/templates/notifications.html:130
+msgid "No notifications"
+msgstr "Aucune notification"
+
+#: myapp/templates/post/group_post.html:250
+#: myapp/templates/post/show_post.html:237
+msgid "No comments yet. Be the first to comment!"
+msgstr "Aucun commentaire pour le moment. Soyez le premier à commenter !"
+
+#: myapp/templates/predict_signal.html:51
+#: myapp/templates/prediction_results.html:52 myapp/templates/scanner.html:54
+msgid "Markets today"
+msgstr "Marchés aujourd'hui"
+
+#: myapp/templates/predict_signal.html:99
+#: myapp/templates/prediction_results.html:101
+msgid "Predict Market Signal"
+msgstr "Prédire le signal de marché"
+
+#: myapp/templates/predict_signal.html:110
+#: myapp/templates/prediction_results.html:113 myapp/templates/scanner.html:105
+msgid "Submit"
+msgstr "Envoyer"
+
+#: myapp/templates/prediction_results.html:123
+msgid "Signal Results of"
+msgstr "Résultats du signal pour"
+
+#: myapp/templates/prediction_results.html:132
+#, python-format
+msgid "Accuracy is above 50%% "
+msgstr "La précision est supérieure à 50%%"
+
+#: myapp/templates/prediction_results.html:136
+#, python-format
+msgid "Accuracy is below 50%%. Please consider carefully before making any investment decision"
+msgstr "La précision est inférieure à 50%%. Veuillez réfléchir attentivement avant de prendre une décision d'investissement"
+
+#: myapp/templates/prediction_results.html:142
+msgid "Close Price"
+msgstr "Prix de clôture"
+
+#: myapp/templates/prediction_results.html:144
+msgid "Precision"
+msgstr "Précision"
+
+#: myapp/templates/prediction_results.html:145
+msgid "Last Difference Change"
+msgstr "Dernière variation de différence"
+
+#: myapp/templates/prediction_results.html:146
+msgid "Last Difference Change Percent"
+msgstr "Dernière variation de différence en pourcentage"
+
+#: myapp/templates/prediction_results.html:152
+msgid "Buy"
+msgstr "Acheter"
+
+#: myapp/templates/prediction_results.html:152
+msgid "Sell"
+msgstr "Vendre"
+
+#: myapp/templates/prediction_results.html:166
+msgid "News"
+msgstr "Actualités"
+
+#: myapp/templates/prediction_results.html:180
+msgid "ticker analysis"
+msgstr "Analyse du ticker"
+
+#: myapp/templates/profile.html:80
+msgid "Subscription Status"
+msgstr "Statut de l'abonnement"
+
+#: myapp/templates/profile.html:84
+msgid "Your subscription is active"
+msgstr "Votre abonnement est actif"
+
+#: myapp/templates/profile.html:84
+msgid "Plan"
+msgstr "Plan"
+
+#: myapp/templates/profile.html:84
+msgid "Subscription End Date"
+msgstr "Date de fin de l'abonnement"
+
+#: myapp/templates/profile.html:86
+msgid "Your subscription is"
+msgstr "Votre abonnement est"
+
+#: myapp/templates/profile.html:86
+msgid "Inactive"
+msgstr "Inactif"
+
+#: myapp/templates/profile.html:86
+msgid "Choose a plan to unlock predictive features and scanners"
+msgstr "Choisissez un plan pour débloquer les fonctionnalités prédictives et les scanners"
+
+#: myapp/templates/profile.html:87
+msgid "Choose Plan"
+msgstr "Choisir un plan"
+
+#: myapp/templates/profile.html:94 myapp/templates/profile.html:107
+msgid "Create Group"
+msgstr "Créer un groupe"
+
+#: myapp/templates/profile.html:102
+msgid "Description"
+msgstr "Description"
+
+#: myapp/templates/public_profile.html:38
+msgid "Unfollow"
+msgstr "Ne plus suivre"
+
+#: myapp/templates/public_profile.html:40
+#: myapp/templates/public_profile.html:47
+msgid "Send Message"
+msgstr "Envoyer un message"
+
+#: myapp/templates/public_profile.html:44
+msgid "Follow"
+msgstr "Suivre"
+
+#: myapp/templates/results_search.html:72
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: myapp/templates/results_search.html:83
+msgid "Posts"
+msgstr "Publications"
+
+#: myapp/templates/results_search.html:90
+msgid "No posts found"
+msgstr "Aucune publication trouvée"
+
+#: myapp/templates/results_search.html:101
+msgid "No groups found"
+msgstr "Aucun groupe trouvé"
+
+#: myapp/templates/scanner.html:115
+msgid "Ticker"
+msgstr "Symbole"
+
+#: myapp/templates/scanner.html:116
+msgid "Analysis Summary"
+msgstr "Résumé de l'analyse"
+
+#: myapp/templates/scanner.html:118
+msgid "Oscillators"
+msgstr "Oscillateurs"
+
+#: myapp/templates/scanner.html:119
+msgid "Moving Averages"
+msgstr "Moyennes Mobiles"
+
+#: myapp/templates/scanner.html:132 myapp/templates/scanner.html:153
+#: myapp/templates/scanner.html:174
+msgid "BUY"
+msgstr "ACHETER"
+
+#: myapp/templates/scanner.html:134 myapp/templates/scanner.html:155
+#: myapp/templates/scanner.html:176
+msgid "STRONG BUY"
+msgstr "ACHAT FORT"
+
+#: myapp/templates/scanner.html:138 myapp/templates/scanner.html:159
+#: myapp/templates/scanner.html:180
+msgid "NEUTRAL"
+msgstr "NEUTRE"
+
+#: myapp/templates/scanner.html:142 myapp/templates/scanner.html:163
+#: myapp/templates/scanner.html:184
+msgid "SELL"
+msgstr "VENDRE"
+
+#: myapp/templates/scanner.html:144 myapp/templates/scanner.html:165
+#: myapp/templates/scanner.html:186
+msgid "STRONG SELL"
+msgstr "VENTE FORTE"
+
+#: myapp/templates/scanner.html:202
+msgid "Stock quotes"
+msgstr "Cotations boursières"
+
+#: myapp/templates/scanner.html:206
+msgid "Stocks"
+msgstr "Actions"
+
+#: myapp/templates/scanner.html:213
+msgid "Technology"
+msgstr "Technologie"
+
+#: myapp/templates/scanner.html:246
+msgid "Services"
+msgstr "Services"
+
+#: myapp/templates/scanner.html:278
+msgid "Forex market heatmap"
+msgstr "Carte thermique du marché Forex"
+
+#~ msgid "English"
+#~ msgstr "Anglais"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabe"
+
+#~ msgid "Turkish"
+#~ msgstr "Turque"
+
+#~ msgid "French"
+#~ msgstr "Français"
+
+#~ msgid "Spanish"
+#~ msgstr "Espagnole"

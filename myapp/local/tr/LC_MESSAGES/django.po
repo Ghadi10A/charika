@@ -1,0 +1,1474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-20 11:14-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: myapp/forms.py:16
+msgid "1 Minute"
+msgstr "1 dakika"
+
+#: myapp/forms.py:17
+msgid "5 Minutes"
+msgstr "5 dakika"
+
+#: myapp/forms.py:18
+msgid "15 Minutes"
+msgstr "15 dakika"
+
+#: myapp/forms.py:19
+msgid "30 Minutes"
+msgstr "30 dakika"
+
+#: myapp/forms.py:20
+msgid "1 Hour"
+msgstr "1 Saat"
+
+#: myapp/forms.py:21
+msgid "4 Hours"
+msgstr "4 saat"
+
+#: myapp/forms.py:22
+msgid "1 Day"
+msgstr "1 gün"
+
+#: myapp/forms.py:23
+msgid "1 Week"
+msgstr "1 hafta"
+
+#: myapp/forms.py:24
+msgid "1 Month"
+msgstr "1 ay"
+
+#: myapp/templates/about/about_us.html:8 myapp/templates/base.html:204
+msgid "About Us"
+msgstr "Hakkımızda"
+
+#: myapp/templates/about/about_us.html:10
+msgid ""
+"Chatnun is a social media and market predictions platform that offers a "
+"range of tools and features to help users stay informed about the latest "
+"trends and opportunities in the markets. Our platform includes market "
+"scanners, signals, and a chatbot to assist with trading decisions. We are "
+"committed to providing our users with the information and tools they need to "
+"make informed investment decisions"
+msgstr ""
+"Chatnun, bir "
+"kullanıcıların en son gelişmelerden haberdar olmalarına yardımcı olacak bir dizi araç ve özellik"
+"piyasalardaki trendler ve fırsatlar. Platformumuz pazar içerir "
+"Ticaret kararlarına yardımcı olmak için tarayıcılar, sinyaller ve bir sohbet robotu. Biz "
+"kullanıcılarımıza ihtiyaç duydukları bilgileri ve araçları sağlamayı taahhüt ediyoruz"
+"Bilinçli yatırım kararları verin"
+
+#: myapp/templates/about/about_us.html:12
+msgid "Our Mission"
+msgstr "Görevimiz"
+
+#: myapp/templates/about/about_us.html:13
+msgid ""
+"At Chatnun, our mission is to provide users with a comprehensive and easy-to-"
+"use platform for accessing market data and making informed investment "
+"decisions. We believe that everyone should have access to the same "
+"information and tools that the professionals use, and we are committed to "
+"making this a reality"
+msgstr ""
+"Chatnun'da misyonumuz, kullanıcılara kapsamlı ve kolay anlaşılır bir"
+"piyasa verilerine erişmek ve bilinçli yatırım yapmak için platformu kullanın"
+"kararlar. Herkesin aynı kararlara erişmesi gerektiğine inanıyoruz "
+"profesyonellerin kullandığı bilgi ve araçlar ve biz buna bağlıyız"
+"bunu gerçeğe dönüştürmek"
+
+#: myapp/templates/about/about_us.html:15
+msgid "Our Features"
+msgstr "Özelliklerimiz"
+
+#: myapp/templates/about/about_us.html:17
+msgid ""
+"Market Scanners: Our market scanners help users quickly and easily find "
+"opportunities in the markets, including stocks, currencies, and "
+"cryptocurrencies"
+msgstr ""
+"Market Tarayıcıları: Market tarayıcılarımız, kullanıcıların hızlı ve kolay bir şekilde bulmalarına yardımcı olur "
+"hisse senetleri, para birimleri dahil olmak üzere piyasalardaki fırsatlar ve "
+"kripto para birimleri"
+
+#: myapp/templates/about/about_us.html:18
+msgid ""
+"Market Signals: Our market signals provide users with real-time alerts about "
+"important market events, such as price movements and news events"
+msgstr ""
+"Piyasa Sinyalleri: Piyasa sinyallerimiz, kullanıcılara hakkında gerçek zamanlı uyarılar sağlar."
+"fiyat hareketleri ve haber olayları gibi önemli piyasa olayları"
+
+#: myapp/templates/about/about_us.html:19
+msgid ""
+"Chatbot: Our chatbot is available 24/7 to help users with trading decisions, "
+"answer questions about the markets, and provide insights into market trends "
+"and opportunities"
+msgstr ""
+"Chatbot: Chatbot'umuz, ticaret kararlarında kullanıcılara yardımcı olmak için 7/24 hizmetinizdedir."
+"piyasalarla ilgili soruları yanıtlayın ve pazar eğilimleri hakkında fikir verin"
+"ve fırsatlar"
+
+#: myapp/templates/about/about_us.html:20
+msgid ""
+"Social Media: Our social media platform allows users to connect with other "
+"traders and investors, share ideas and strategies, and stay up-to-date on "
+"the latest market news"
+msgstr ""
+"Sosyal Medya: Sosyal medya platformumuz, kullanıcıların diğer kişilerle bağlantı kurmasını sağlar"
+"tüccarlar ve yatırımcılar, fikir ve stratejileri paylaşın ve güncel kalın"
+"en son piyasa haberleri"
+
+#: myapp/templates/about/about_us.html:23
+msgid "Our Co-Founder"
+msgstr "Kurucu Ortağımız"
+
+#: myapp/templates/about/about_us.html:24
+msgid ""
+"Chatnun was founded by Amin Ghadi, a seasoned trader and investor with over "
+"15 years of experience in the financial markets. Amin has a passion for "
+"using technology to help democratize access to market data and trading "
+"tools, and he is committed to making the markets more accessible and "
+"transparent for everyone"
+msgstr ""
+"Chatnun, tecrübeli bir tüccar ve yatırımcı olan Amin Ghadi tarafından kuruldu"
+"Finansal piyasalarda 15 yıllık deneyim. Amin'in tutkusu var"
+"piyasa verilerine ve ticarete erişimi demokratikleştirmeye yardımcı olmak için teknolojiyi kullanmak"
+"araçlar ve pazarları daha erişilebilir kılmaya kararlı ve "
+"Herkes için şeffaf"
+
+#: myapp/templates/about/about_us.html:26
+msgid "Responsible Payment Processing"
+msgstr "Sorumlu Ödeme İşlemleri"
+
+#: myapp/templates/about/about_us.html:27
+msgid ""
+"At Chatnun, we take our responsibility for processing payments seriously. We "
+"use the latest encryption and security technologies to ensure that all "
+"transactions are safe and secure. We also take steps to prevent fraud and "
+"ensure that our users are protected from unauthorized transactions"
+msgstr ""
+"Chatnun'da ödemeleri işleme koyma sorumluluğumuzu ciddiye alıyoruz. Biz "
+"hepsinden emin olmak için en son şifreleme ve güvenlik teknolojilerini kullanın"
+"işlemler güvenli ve emniyetlidir. Ayrıca dolandırıcılığı önlemek için adımlar atıyoruz ve "
+"kullanıcılarımızın yetkisiz işlemlerden korunmasını sağlamak"
+
+#: myapp/templates/about/about_us.html:29
+msgid "Customer Support"
+msgstr "Müşteri desteği"
+
+#: myapp/templates/about/about_us.html:30
+msgid ""
+"At Chatnun, we believe that providing excellent customer support is "
+"essential to our mission. We are committed to providing our users with fast "
+"and efficient support, and we are always available to answer questions and "
+"provide assistance. If you have any questions or concerns about our "
+"platform, please contact us at"
+msgstr ""
+"Chatnun'da mükemmel müşteri desteği sağlamanın "
+"Misyonumuz için gerekli. Kullanıcılarımıza hızlı bir şekilde hizmet vermeye kararlıyız"
+"ve verimli destek ve soruları yanıtlamak için her zaman hazırız ve "
+"yardım sağlayın. Bizimle ilgili herhangi bir sorunuz veya endişeniz varsa "
+"platform, lütfen bizimle iletişime geçin"
+
+#: myapp/templates/about/about_us.html:32
+#: myapp/templates/about/contact_us.html:20 myapp/templates/base.html:207
+msgid "Contact Us"
+msgstr "Bize Ulaşın"
+
+#: myapp/templates/about/about_us.html:33
+msgid ""
+"If you have any questions about Chatnun or would like to learn more about "
+"our platform, please contact us at"
+msgstr ""
+"Chatnun hakkında herhangi bir sorunuz varsa veya hakkında daha fazla bilgi edinmek istiyorsanız"
+"Platformumuz, lütfen bizimle iletişime geçin"
+
+#: myapp/templates/about/contact_us.html:21
+msgid ""
+"Have a question or comment? We'd love to hear from you! Fill out the form "
+"below and we'll get back to you as soon as possible."
+msgstr ""
+"Bir sorunuz veya yorumunuz mu var? Sizden haber almak isteriz! Formu doldurun "
+"aşağıda ve size en kısa sürede geri döneceğiz."
+
+#: myapp/templates/about/contact_us.html:26 myapp/templates/profile.html:99
+msgid "Name"
+msgstr "İsim"
+
+#: myapp/templates/about/contact_us.html:30
+msgid "Email"
+msgstr "E-posta"
+
+#: myapp/templates/about/contact_us.html:34
+msgid "Message"
+msgstr "İleti"
+
+#: myapp/templates/about/privacy_policy.html:8 myapp/templates/base.html:201
+msgid "Privacy Policy"
+msgstr "Gizlilik Politikası"
+
+#: myapp/templates/about/privacy_policy.html:10
+msgid ""
+"We are committed to protecting your privacy. This Privacy Policy explains "
+"how we collect, use, and disclose information about you when you use our "
+"website"
+msgstr ""
+"Gizliliğinizi korumayı taahhüt ediyoruz. Bu Gizlilik Politikası şunları açıklar: "
+"bizi kullandığınızda sizinle ilgili bilgileri nasıl toplarız, kullanırız ve ifşa ederiz"
+"İnternet sitesi"
+
+#: myapp/templates/about/privacy_policy.html:12
+msgid "1. Information We Collect"
+msgstr "1. Topladığımız Bilgiler"
+
+#: myapp/templates/about/privacy_policy.html:13
+msgid "We collect information about you when you use our website, including"
+msgstr "Aşağıdakiler dahil olmak üzere web sitemizi kullandığınızda sizinle ilgili bilgiler topluyoruz:"
+
+#: myapp/templates/about/privacy_policy.html:15
+msgid ""
+"Information you provide to us, such as your name and email address when you "
+"sign up for an account"
+msgstr ""
+"Adınız ve e-posta adresiniz gibi bize sağladığınız bilgiler"
+"bir hesap için kaydolun"
+
+#: myapp/templates/about/privacy_policy.html:16
+msgid ""
+"Information we collect automatically when you use our website, such as your "
+"IP address and device type"
+msgstr ""
+"Sizin gibi web sitemizi kullandığınızda otomatik olarak topladığımız bilgiler"
+"IP adresi ve cihaz tipi"
+
+#: myapp/templates/about/privacy_policy.html:17
+msgid ""
+"Information we collect from third-party sources, such as social media "
+"platforms"
+msgstr ""
+"Sosyal medya gibi üçüncü taraf kaynaklardan topladığımız bilgiler"
+"platformlar"
+
+#: myapp/templates/about/privacy_policy.html:20
+msgid "2. How We Use Your Information"
+msgstr "2. Bilgilerinizi Nasıl Kullanıyoruz?"
+
+#: myapp/templates/about/privacy_policy.html:21
+msgid "We use the information we collect to"
+msgstr "Topladığımız bilgileri şu amaçlarla kullanırız:"
+
+#: myapp/templates/about/privacy_policy.html:23
+msgid "Provide and improve our website"
+msgstr "Web sitemizi sağlayın ve geliştirin"
+
+#: myapp/templates/about/privacy_policy.html:24
+msgid "Communicate with you, such as to send you updates and marketing materials"
+msgstr "Size güncellemeler ve pazarlama materyalleri göndermek gibi amaçlarla sizinle iletişim kurmak"
+
+#: myapp/templates/about/privacy_policy.html:25
+msgid "Customize content and advertising"
+msgstr "İçeriği ve reklamları özelleştirin"
+
+#: myapp/templates/about/privacy_policy.html:26
+msgid "Prevent and detect fraud"
+msgstr "Dolandırıcılığı önleme ve tespit etme"
+
+#: myapp/templates/about/privacy_policy.html:27
+msgid "Comply with legal obligations"
+msgstr "Yasal yükümlülüklere uyun"
+
+#: myapp/templates/about/privacy_policy.html:30
+msgid "3. How We Share Your Information"
+msgstr "3. Bilgilerinizi Nasıl Paylaşıyoruz?"
+
+#: myapp/templates/about/privacy_policy.html:31
+msgid "We may share your information with"
+msgstr "Bilgilerinizi şu kişilerle paylaşabiliriz:"
+
+#: myapp/templates/about/privacy_policy.html:33
+msgid "Service providers, such as hosting and email providers"
+msgstr "Barındırma ve e-posta sağlayıcıları gibi hizmet sağlayıcılar"
+
+#: myapp/templates/about/privacy_policy.html:34
+msgid "Third-party partners for marketing and advertising purposes"
+msgstr "Pazarlama ve reklam amaçlı üçüncü taraf ortaklar"
+
+#: myapp/templates/about/privacy_policy.html:35
+msgid "Law enforcement agencies or government authorities if required by law"
+msgstr "Yasaların gerektirmesi halinde kolluk kuvvetleri veya devlet yetkilileri"
+
+#: myapp/templates/about/privacy_policy.html:36
+msgid "Other third parties with your consent"
+msgstr "Onayınız ile diğer üçüncü şahıslar"
+
+#: myapp/templates/about/privacy_policy.html:39
+msgid "4. Security"
+msgstr "4. Güvenlik"
+
+#: myapp/templates/about/privacy_policy.html:40
+msgid ""
+"We take reasonable measures to protect your information from unauthorized "
+"access, use, or disclosure. However, no method of transmission over the "
+"internet or method of electronic storage is completely secure"
+msgstr ""
+"Bilgilerinizi yetkisiz kişilerden korumak için makul önlemler alıyoruz"
+"erişim, kullanım veya ifşa. Ancak, üzerinden hiçbir aktarım yöntemi "
+"İnternet veya elektronik depolama yöntemi tamamen güvenlidir"
+
+#: myapp/templates/about/privacy_policy.html:42
+msgid "5. Disclaimer of Liability"
+msgstr "5. Sorumluluğun Reddi"
+
+#: myapp/templates/about/privacy_policy.html:43
+msgid ""
+"We do not assume any liability for any unauthorized access to or use of your "
+"personal information. We are not responsible for any financial losses or "
+"damages resulting from the use of our website or the information provided "
+"through our website. By using our website, you assume all risks associated "
+"with such use"
+msgstr ""
+"Size herhangi bir yetkisiz erişim veya kullanım için herhangi bir sorumluluk kabul etmiyoruz"
+"kişisel bilgiler. Herhangi bir mali kayıptan veya "
+"web sitemizin veya sağlanan bilgilerin kullanımından kaynaklanan zararlar"
+"web sitemiz aracılığıyla. Web sitemizi kullanarak ilgili tüm riskleri üstleniyorsunuz"
+"böyle bir kullanımla"
+
+#: myapp/templates/about/privacy_policy.html:45
+msgid "6. Changes to this Privacy Policy"
+msgstr "6. Bu Gizlilik Politikasındaki Değişiklikler"
+
+#: myapp/templates/about/privacy_policy.html:46
+msgid ""
+"We may update this Privacy Policy from time to time. If we make material "
+"changes, we will notify you by posting a notice on our website or sending "
+"you an email. Your continued use of our website after any changes indicates "
+"your acceptance of the updated Privacy Policy"
+msgstr ""
+"Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Materyal yaparsak "
+"değişiklikler, web sitemizde bir duyuru yayınlayarak veya göndererek sizi bilgilendireceğiz"
+"size bir e-posta. Herhangi bir değişiklikten sonra web sitemizi kullanmaya devam ettiğinizi gösterir"
+"güncellenmiş Gizlilik Politikasını kabulünüz"
+
+#: myapp/templates/about/privacy_policy.html:48
+msgid "7. Contact Us"
+msgstr "7. Bize Ulaşın"
+
+#: myapp/templates/about/privacy_policy.html:49
+msgid "If you have any questions about this Privacy Policy or our website, please contact us at"
+msgstr "Bu Gizlilik Politikası veya web sitemiz hakkında herhangi bir sorunuz varsa, lütfen bizimle şu adresten iletişime geçin"
+
+#: myapp/templates/about/terms_of_service.html:8
+msgid "Terms of Service"
+msgstr "Kullanım Şartları"
+
+#: myapp/templates/about/terms_of_service.html:9
+msgid ""
+"Welcome to our website! This website is provided as a service to our users. "
+"Please read these terms and conditions carefully before using our website. "
+"By using our website, you agree to these terms and conditions"
+msgstr ""
+"Web sitemize hoş geldiniz! Bu web sitesi kullanıcılarımıza bir hizmet olarak sunulmaktadır."
+"Web sitemizi kullanmadan önce lütfen bu hüküm ve koşulları dikkatlice okuyunuz."
+"Web sitemizi kullanarak, bu hüküm ve koşulları kabul etmiş olursunuz"
+
+#: myapp/templates/about/terms_of_service.html:11
+msgid "1. Use of Our Website"
+msgstr "1. Web Sitemizin Kullanımı"
+
+#: myapp/templates/about/terms_of_service.html:12
+msgid "You may use our website for lawful purposes only. You may not use our website"
+msgstr "Web sitemizi yalnızca yasal amaçlar için kullanabilirsiniz. Web sitemizi kullanamazsınız"
+
+#: myapp/templates/about/terms_of_service.html:14
+msgid ""
+"in any way that violates any applicable federal, state, local, or "
+"international law or regulation"
+msgstr ""
+"geçerli herhangi bir federal, eyalet, yerel veya "
+"uluslararası hukuk veya düzenleme"
+
+#: myapp/templates/about/terms_of_service.html:15
+msgid "to engage in any fraudulent or malicious activity"
+msgstr "herhangi bir hileli veya kötü niyetli faaliyette bulunmak"
+
+#: myapp/templates/about/terms_of_service.html:16
+msgid "to transmit any advertising or promotional material without our prior written consent"
+msgstr "önceden yazılı iznimiz olmadan herhangi bir reklam veya tanıtım materyali iletmek"
+
+#: myapp/templates/about/terms_of_service.html:17
+msgid "to impersonate or attempt to impersonate us, our employees, another user, or any other person or entity"
+msgstr "bizi, çalışanlarımızı, başka bir kullanıcıyı veya başka bir kişi veya kuruluşu taklit etmek veya taklit etmeye çalışmak"
+
+#: myapp/templates/about/terms_of_service.html:18
+msgid "to interfere with or disrupt the operation of our website or servers or networks connected to our website"
+msgstr "web sitemizin veya web sitemize bağlı sunucuların veya ağların çalışmasına müdahale etmek veya kesintiye uğratmak"
+
+#: myapp/templates/about/terms_of_service.html:18
+#: myapp/templates/about/terms_of_service.html:30
+msgid "or"
+msgstr "veya"
+
+#: myapp/templates/about/terms_of_service.html:19
+msgid ""
+"to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or "
+"discriminate based on gender, sexual orientation, religion, ethnicity, race, "
+"age, national origin, or disability"
+msgstr ""
+"taciz etmek, suistimal etmek, hakaret etmek, zarar vermek, karalamak, iftira atmak, küçük düşürmek, sindirmek veya "
+"cinsiyet, cinsel yönelim, din, etnik köken, ırk temelinde ayrımcılık"
+"yaş, ulusal köken veya engellilik"
+
+#: myapp/templates/about/terms_of_service.html:22
+msgid "2. Market Predictions and Investment Advice"
+msgstr ""
+
+#: myapp/templates/about/terms_of_service.html:23
+msgid ""
+"The market predictions and investment advice provided on our website are for "
+"informational purposes only and should not be construed as financial or "
+"investment advice. You should consult a qualified professional advisor "
+"before making any investment decisions"
+msgstr ""
+"Web sitemizde verilen piyasa tahminleri ve yatırım tavsiyeleri"
+"yalnızca bilgilendirme amaçlıdır ve mali veya olarak yorumlanmamalıdır "
+"yatırım tavsiyesi. Nitelikli bir profesyonel danışmana danışmalısınız "
+"Herhangi bir yatırım kararı vermeden önce"
+
+#: myapp/templates/about/terms_of_service.html:25
+msgid "3. User Content"
+msgstr "3. Kullanıcı İçeriği"
+
+#: myapp/templates/about/terms_of_service.html:26
+msgid ""
+"You are solely responsible for any content that you post or transmit on our "
+"website. You agree not to post or transmit any content that is"
+msgstr ""
+"Bize gönderdiğiniz veya ilettiğiniz herhangi bir içerikten yalnızca siz sorumlusunuz"
+"web sitesi. olan herhangi bir içeriği göndermemeyi veya iletmemeyi kabul ediyorsunuz."
+
+#: myapp/templates/about/terms_of_service.html:28
+msgid ""
+"unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, "
+"obscene, libelous, invasive of another's privacy, or hateful"
+msgstr ""
+"yasa dışı, zararlı, tehdit edici, küfürlü, taciz edici, iftira niteliğinde, kaba, "
+"müstehcen, iftira niteliğinde, başka birinin mahremiyetini ihlal eden veya nefret dolu"
+
+#: myapp/templates/about/terms_of_service.html:29
+msgid "contains any virus, worm, Trojan horse, or other harmful component"
+msgstr "herhangi bir virüs, solucan, Truva atı veya diğer zararlı bileşenleri içerir"
+
+#: myapp/templates/about/terms_of_service.html:30
+msgid "infringes any intellectual property right or other proprietary right of any third party"
+msgstr "herhangi bir üçüncü şahsın herhangi bir fikri mülkiyet hakkını veya diğer mülkiyet hakkını ihlal eden"
+
+#: myapp/templates/about/terms_of_service.html:31
+msgid "contains any advertising or promotional material without our prior written content"
+msgstr "önceden yazılı içeriğimiz olmadan herhangi bir reklam veya tanıtım materyali içerir"
+
+#: myapp/templates/about/terms_of_service.html:33
+msgid ""
+"We reserve the right to remove any user content that violates these terms "
+"and conditions or for any other reason in our sole discretion"
+msgstr ""
+"Bu şartları ihlal eden herhangi bir kullanıcı içeriğini kaldırma hakkını saklı tutuyoruz"
+"ve koşullar veya başka herhangi bir nedenle tamamen kendi takdirimize bağlı olarak"
+
+#: myapp/templates/about/terms_of_service.html:35
+msgid "4. Disclaimer of Warranties"
+msgstr "4. Garantilerin Reddi"
+
+#: myapp/templates/about/terms_of_service.html:36
+msgid ""
+"Our website is provided on an as is and as available basis. We make no "
+"representations or warranties of any kind, express or implied, as to the "
+"operation of our website or the information, content, materials, or products "
+"included on our website. You expressly agree that your use of our website is "
+"at your sole risk"
+msgstr ""
+"Web sitemiz olduğu gibi ve mevcut olduğu şekilde sunulmaktadır. Hiçbir şey yapmıyoruz "
+"ile ilgili olarak açık veya zımni her türlü beyan veya garanti"
+"web sitemizin veya bilgi, içerik, malzeme veya ürünlerin işletilmesi"
+"web sitemizde yer almaktadır. Web sitemizi kullanımınızın "
+"tek risk size aittir"
+
+#: myapp/templates/about/terms_of_service.html:38
+msgid "5. Limitation of Liability"
+msgstr "5. Sorumluluğun Sınırlandırılması"
+
+#: myapp/templates/about/terms_of_service.html:39
+msgid ""
+"In no event shall we be liable for any direct, indirect, punitive, "
+"incidental, special, or consequential damages arising out of or in any way "
+"connected with the use of our website, whether based on contract, tort, "
+"strict liability, or any other theory of liability, even if we have been "
+"advised of the possibility"
+msgstr ""
+"Hiçbir durumda, herhangi bir doğrudan, dolaylı, cezai sorumluluktan sorumlu olmayacağız"
+"herhangi bir şekilde veya herhangi bir şekilde ortaya çıkan tesadüfi, özel veya sonuç olarak ortaya çıkan zararlar"
+"Sitemizin kullanımı ile bağlantılı olsun, sözleşmeye dayalı olsun, haksız fiil,"
+"kesin sorumluluk veya başka herhangi bir sorumluluk teorisi, biz olsak bile"
+"olasılık konusunda tavsiyede bulunuldu"
+
+#: myapp/templates/about/terms_of_service.html:40
+msgid "6. Indemnification"
+msgstr "6. Tazminat"
+
+#: myapp/templates/about/terms_of_service.html:41
+msgid ""
+"You agree to indemnify and hold us and our affiliates, officers, agents, and "
+"employees harmless from any claim, demand, or damage, including reasonable "
+"attorneys' fees, arising out of or in connection with your use of our "
+"website or your breach of these terms and conditions"
+msgstr ""
+"Bizi ve iştiraklerimizi, memurlarımızı, acentelerimizi ve "
+"Çalışanlar, makul olanlar da dahil olmak üzere herhangi bir iddia, talep veya zarardan muaftır"
+"bizim kullanımınızdan kaynaklanan veya bununla bağlantılı olarak ortaya çıkan avukatlık ücretleri"
+"web sitesi veya bu hüküm ve koşulları ihlal etmeniz"
+
+#: myapp/templates/about/terms_of_service.html:43
+msgid "7. Modifications to Our Website and Terms of Service"
+msgstr "7. Web Sitemizde ve Hizmet Koşullarımızda Yapılan Değişiklikler"
+
+#: myapp/templates/about/terms_of_service.html:44
+msgid ""
+"We reserve the right to modify or discontinue our website, or any portion "
+"thereof, with or without notice to you. We may also change these terms and "
+"conditions from time to time without notice to you. By continuing to use our "
+"website after any modifications to these terms and conditions, you agree to "
+"be bound by such modifications"
+msgstr ""
+"Web sitemizi veya herhangi bir bölümünü değiştirme veya durdurma hakkını saklı tutuyoruz"
+"size bildirimde bulunarak veya bulunmayarak. Ayrıca bu şartları değiştirebiliriz ve "
+"Zaman zaman size bildirimde bulunmaksızın koşulları. Bizim kullanmaya devam ederek"
+"web sitesinde bu hüküm ve koşullarda yapılan herhangi bir değişiklikten sonra, şunları kabul etmiş sayılırsınız: "
+"bu tür değişikliklerle bağlı olmak"
+
+#: myapp/templates/about/terms_of_service.html:46
+msgid "8. Governing Law and Jurisdiction"
+msgstr "8. Uygulanacak Hukuk ve Yargı Yetkisi"
+
+#: myapp/templates/about/terms_of_service.html:47
+msgid ""
+"These terms and conditions shall be governed by and construed in accordance "
+"with the laws of the state of California, without regard to its conflicts of "
+"law principles. Any legal action or proceeding arising out of or relating to "
+"these terms and conditions or your use of our website shall be brought "
+"exclusively in a state or federal court located in San Francisco, California"
+msgstr ""
+"Bu şartlar ve koşullar, tarafından yönetilecek ve buna göre yorumlanacaktır "
+"çatışmalarına bakılmaksızın, Kaliforniya eyaleti yasalarıyla"
+"hukuk ilkeleri. Bundan kaynaklanan veya bunlarla ilgili herhangi bir yasal işlem veya kovuşturma"
+"bu şartlar ve koşullar veya web sitemizi kullanımınız getirilecektir"
+"yalnızca San Francisco, California'da bulunan bir eyalet veya federal mahkemede"
+
+#: myapp/templates/about/terms_of_service.html:49
+msgid "9. Contact Us"
+msgstr "9. Bize Ulaşın"
+
+#: myapp/templates/about/terms_of_service.html:50
+msgid "If you have any questions about these terms and conditions or our website, please contact us at"
+msgstr "Bu şartlar ve koşullar veya web sitemiz hakkında herhangi bir sorunuz varsa, lütfen bizimle şu adresten iletişime geçin:"
+
+#: myapp/templates/account/login.html:40 myapp/templates/account/login.html:45
+#: myapp/templates/auth/login.html:40 myapp/templates/auth/login.html:45
+#: myapp/templates/base.html:183
+msgid "Log in"
+msgstr "Giriş yapmak"
+
+#: myapp/templates/account/signup.html:35
+#: myapp/templates/account/signup.html:45 myapp/templates/auth/signup.html:35
+#: myapp/templates/auth/signup.html:45 myapp/templates/base.html:184
+msgid "Sign up"
+msgstr "Üye olmak"
+
+#: myapp/templates/account/signup.html:41 myapp/templates/auth/signup.html:41
+msgid "*By Register You Accept our Terms and Policies"
+msgstr "*Kayıt Olarak Şartlarımızı ve Politikalarımızı Kabul Edersiniz"
+
+#: myapp/templates/auth/account_activated.html:7
+msgid "Account Activated"
+msgstr "Hesap Etkinleştirildi"
+
+#: myapp/templates/auth/account_activated.html:10
+msgid "Verify your email"
+msgstr "Eposta adresinizi doğrulayın"
+
+#: myapp/templates/auth/account_activated.html:11
+msgid "Dear"
+msgstr "Canım"
+
+#: myapp/templates/auth/account_activated.html:12
+msgid "Please click on the following link to verify your email address"
+msgstr "E-posta adresinizi doğrulamak için lütfen aşağıdaki bağlantıya tıklayın"
+
+#: myapp/templates/auth/account_activated.html:14
+msgid "If you did not request this verification, please ignore this email"
+msgstr "Bu doğrulamayı siz talep etmediyseniz, lütfen bu e-postayı dikkate almayın."
+
+#: myapp/templates/auth/account_activated.html:15
+msgid "Thank you for using our service"
+msgstr "Servisimizi kullandığınız için teşekkür ederiz"
+
+#: myapp/templates/auth/email_verification_sent.html:8
+msgid "Verify Your Email Address"
+msgstr "Email adresinizi doğrulayın"
+
+#: myapp/templates/auth/email_verification_sent.html:11
+msgid "We've sent an email to your email address. Please follow the link in the email to verify your account"
+msgstr "E-posta adresinize bir e-posta gönderdik. Hesabınızı doğrulamak için lütfen e-postadaki bağlantıyı takip edin"
+
+#: myapp/templates/auth/email_verification_sent.html:13
+msgid "Verification email has been resent"
+msgstr "Doğrulama e-postası yeniden gönderildi"
+
+#: myapp/templates/auth/email_verification_sent.html:15
+msgid "Didn't receive an email?"
+msgstr "E-posta almadınız mı?"
+
+#: myapp/templates/auth/email_verification_sent.html:15
+msgid "Resend verification email"
+msgstr "Doğrulama e-postasını tekrar gönder"
+
+#: myapp/templates/auth/email_verification_sent.html:17
+#: myapp/templates/base.html:178
+msgid "log out"
+msgstr "çıkış Yap"
+
+#: myapp/templates/auth/login.html:48
+msgid "Or"
+msgstr "Veya"
+
+#: myapp/templates/auth/login.html:49
+msgid "sign in with"
+msgstr "şununla giriş yap"
+
+#: myapp/templates/auth/login.html:53
+msgid "Sign in with Google"
+msgstr "Google ile giriş yap"
+
+#: myapp/templates/auth/login.html:59
+msgid "Sign in with Microsoft"
+msgstr "Microsoft ile oturum açın"
+
+#: myapp/templates/base.html:14
+msgid "ChatNun | App"
+msgstr "ChatNun | Uygulama"
+
+#: myapp/templates/base.html:60
+msgid "Home"
+msgstr "Ana"
+
+#: myapp/templates/base.html:63 myapp/templates/prediction_results.html:143
+msgid "Signal"
+msgstr "Sinyal"
+
+#: myapp/templates/base.html:66
+msgid "Scanner"
+msgstr "Tarayıcı"
+
+#: myapp/templates/base.html:70 myapp/templates/base.html:73
+msgid "ChatBot"
+msgstr "Chatbot"
+
+#: myapp/templates/base.html:74
+msgid "ChatBotTrade"
+msgstr "ChatbotTrade"
+
+#: myapp/templates/base.html:132
+msgid "View All"
+msgstr "Hepsini gör"
+
+#: myapp/templates/base.html:175
+msgid "Account"
+msgstr "Hesap"
+
+#: myapp/templates/base.html:176 myapp/templates/notifications.html:87
+msgid "Messages"
+msgstr "Mesajlar"
+
+#: myapp/templates/base.html:198
+msgid "Terms of Use"
+msgstr "Kullanım Şartları"
+
+#: myapp/templates/base.html:217
+msgid "Switch"
+msgstr "Anahtar"
+
+#: myapp/templates/base.html:222
+msgid "Copyright"
+msgstr "telif hakkı"
+
+#: myapp/templates/base.html:222
+msgid "2023 All Rights Reserved"
+msgstr "2023 Tüm Hakları Saklıdır"
+
+#: myapp/templates/chat/group_chat.html:68
+#: myapp/templates/chat/message_thread.html:68
+#: myapp/templates/chat/saved_conversations.html:11
+#: myapp/templates/chatbot/chatbot.html:57
+#: myapp/templates/chatbot/chatbotTrade.html:30
+#: myapp/templates/chatbot/chatbotTrade.html:61
+#: myapp/templates/modals/search.html:74
+msgid "Saved Conversations"
+msgstr "Kayıtlı Konuşmalar"
+
+#: myapp/templates/chat/group_chat.html:132
+#: myapp/templates/chat/message_thread.html:131
+msgid "No messages yet"
+msgstr "Henüz mesaj yok"
+
+#: myapp/templates/chat/saved_conversations.html:16
+#: myapp/templates/group/group_detail.html:92 myapp/templates/home.html:99
+#: myapp/templates/modals/search.html:71 myapp/templates/results_search.html:46
+msgid "Search"
+msgstr "Aramak"
+
+#: myapp/templates/chat/saved_conversations.html:32
+msgid "Unread"
+msgstr "Okunmamış"
+
+#: myapp/templates/chat/saved_conversations.html:54
+msgid "No results found"
+msgstr "Sonuç bulunamadı"
+
+#: myapp/templates/chat/saved_conversations.html:58
+msgid "Select a conversation to view messages"
+msgstr "Mesajları görüntülemek için bir konuşma seçin"
+
+#: myapp/templates/chat/user_list.html:11
+msgid "Online"
+msgstr "Çevrimiçi"
+
+#: myapp/templates/chat/user_list.html:13
+msgid "Offline"
+msgstr "çevrimdışı"
+
+#: myapp/templates/chatbot/chatbot.html:30
+#: myapp/templates/chatbot/chatbotTrade.html:38
+msgid "Chatbot"
+msgstr "Chatbot"
+
+#: myapp/templates/chatbot/chatbot.html:67
+#: myapp/templates/chatbot/chatbotTrade.html:72
+#: myapp/templates/group/group_detail.html:164
+#: myapp/templates/modals/delete_comment.html:57
+#: myapp/templates/modals/delete_group.html:12
+#: myapp/templates/modals/delete_post.html:57 myapp/templates/profile.html:128
+msgid "Delete"
+msgstr "Silmek"
+
+#: myapp/templates/chatbot/chatbotTrade.html:36
+msgid "You"
+msgstr "Sen"
+
+#: myapp/templates/chatbot/chatbotTrade.html:62
+msgid "Start New Conversation"
+msgstr "Yeni Konuşma Başlat"
+
+#: myapp/templates/choose_plan.html:5
+msgid "Choose a Plan"
+msgstr "Bir Plan Seçin"
+
+#: myapp/templates/choose_plan.html:6
+msgid "Select a subscription plan to activate your account"
+msgstr "Hesabınızı etkinleştirmek için bir abonelik planı seçin"
+
+#: myapp/templates/choose_plan.html:11 myapp/templates/get_started.html:88
+msgid "3 Months"
+msgstr "3 ay"
+
+#: myapp/templates/choose_plan.html:14
+msgid "$18"
+msgstr "18 dolar"
+
+#: myapp/templates/choose_plan.html:16 myapp/templates/choose_plan.html:32
+#: myapp/templates/choose_plan.html:48 myapp/templates/get_started.html:93
+#: myapp/templates/get_started.html:109 myapp/templates/get_started.html:125
+msgid "Access to all features"
+msgstr "Tüm özelliklere erişim"
+
+#: myapp/templates/choose_plan.html:17 myapp/templates/choose_plan.html:33
+#: myapp/templates/choose_plan.html:49 myapp/templates/get_started.html:94
+#: myapp/templates/get_started.html:110 myapp/templates/get_started.html:126
+msgid "Free support"
+msgstr "ücretsiz destek"
+
+#: myapp/templates/choose_plan.html:18 myapp/templates/choose_plan.html:34
+#: myapp/templates/choose_plan.html:50 myapp/templates/get_started.html:95
+#: myapp/templates/get_started.html:111 myapp/templates/get_started.html:127
+msgid "Cancel anytime"
+msgstr "istediğiniz zaman iptal edin"
+
+#: myapp/templates/choose_plan.html:20 myapp/templates/choose_plan.html:36
+#: myapp/templates/choose_plan.html:52 myapp/templates/get_started.html:97
+#: myapp/templates/get_started.html:113 myapp/templates/get_started.html:129
+msgid "Subscribe now"
+msgstr "şimdi abone ol"
+
+#: myapp/templates/choose_plan.html:27 myapp/templates/get_started.html:104
+msgid "6 Months"
+msgstr "6 ay"
+
+#: myapp/templates/choose_plan.html:30 myapp/templates/get_started.html:123
+msgid "$29"
+msgstr "29 dollar"
+
+#: myapp/templates/choose_plan.html:43 myapp/templates/get_started.html:120
+msgid "1 Year"
+msgstr "1 yıl"
+
+#: myapp/templates/choose_plan.html:46
+msgid "$49"
+msgstr "49 dollar"
+
+#: myapp/templates/get_started.html:36
+msgid "Predict Markets with Machine Learning"
+msgstr "Makine Öğrenimi ile Piyasaları Tahmin Edin"
+
+#: myapp/templates/get_started.html:37
+msgid "Our app uses advanced machine learning algorithms to provide accurate market predictions"
+msgstr "Uygulamamız, doğru pazar tahminleri sağlamak için gelişmiş makine öğrenimi algoritmaları kullanır"
+
+#: myapp/templates/get_started.html:46
+msgid "Real-time Scanners"
+msgstr "Gerçek Zamanlı Tarayıcılar"
+
+#: myapp/templates/get_started.html:47
+msgid "Our app includes real-time scanners to keep you up-to-date on market trends"
+msgstr "Uygulamamız, sizi piyasa trendleri konusunda güncel tutmak için gerçek zamanlı tarayıcılar içerir"
+
+#: myapp/templates/get_started.html:56
+msgid "Free Signup for"
+msgstr "için Ücretsiz Kayıt"
+
+#: myapp/templates/get_started.html:57
+msgid "Chatbot and Social Capabilities"
+msgstr "Chatbot ve Sosyal Yetenekler"
+
+#: myapp/templates/get_started.html:58
+msgid "Our app includes a chatbot for personalized predictions and social capabilities to connect with other users"
+msgstr "Uygulamamız, kişiselleştirilmiş tahminler için bir sohbet robotu ve diğer kullanıcılarla bağlantı kurmak için sosyal yetenekler içerir."
+
+#: myapp/templates/get_started.html:79
+msgid "Welcome to Chatnun App"
+msgstr "Chatnun Uygulamasına Hoş Geldiniz"
+
+#: myapp/templates/get_started.html:80
+msgid "Use our machine learning model to predict the movement of financial instruments"
+msgstr "Finansal araçların hareketini tahmin etmek için makine öğrenimi modelimizi kullanın"
+
+#: myapp/templates/get_started.html:82
+msgid "Select an instrument from the dropdown above and click Predict to see the result"
+msgstr "Yukarıdaki açılır menüden bir araç seçin ve sonucu görmek için Tahmin Et'e tıklayın"
+
+#: myapp/templates/get_started.html:91
+msgid "$9"
+msgstr "9 dollar"
+
+#: myapp/templates/get_started.html:107
+msgid "$19"
+msgstr "19 dollar"
+
+#: myapp/templates/get_started.html:141
+msgid "About the Model"
+msgstr "Model Hakkında"
+
+#: myapp/templates/get_started.html:142
+msgid ""
+"Our model uses advanced machine learning algorithms to predict the movement "
+"of financial instruments based on historical data and market conditions"
+msgstr ""
+"Modelimiz, hareketi tahmin etmek için gelişmiş makine öğrenimi algoritmaları kullanıyor"
+"geçmiş verilere ve piyasa koşullarına dayalı finansal araçların"
+
+#: myapp/templates/get_started.html:150
+msgid "Supported Instruments"
+msgstr "Desteklenen Enstrümanlar"
+
+#: myapp/templates/get_started.html:151
+msgid ""
+"Our model currently supports prediction for the following instruments: "
+"NASDAQ 100, Amazon, Apple, Tesla, Google, Meta, Gold, Oil, BTC"
+msgstr ""
+"Modelimiz şu anda aşağıdaki enstrümanlar için tahmini desteklemektedir "
+"NASDAQ 100, Amazon, Apple, Tesla, Google, Meta, Altın, Petrol, BTC"
+
+#: myapp/templates/get_started.html:159
+msgid "Accuracy"
+msgstr "Kesinlik"
+
+#: myapp/templates/get_started.html:160
+msgid ""
+"Our model has a high accuracy rate and is constantly being improved to "
+"provide the most reliable predictions possible. and always in developement"
+msgstr ""
+"Modelimiz yüksek doğruluk oranına sahiptir ve sürekli olarak geliştirilmektedir"
+"mümkün olan en güvenilir tahminleri sağlar ve her zaman geliştirme aşamasındadır"
+
+#: myapp/templates/group/group_detail.html:26
+#: myapp/templates/modals/join_requests.html:17
+#: myapp/templates/post/group_post.html:26
+msgid "Admin"
+msgstr "yönetici"
+
+#: myapp/templates/group/group_detail.html:32
+#: myapp/templates/modals/delete_group.html:7
+#: myapp/templates/modals/join_requests.html:27
+#: myapp/templates/post/group_post.html:32
+msgid "Delete Group"
+msgstr "Grubu Sil"
+
+#: myapp/templates/group/group_detail.html:34
+#: myapp/templates/modals/join_requests.html:29
+#: myapp/templates/post/group_post.html:34
+msgid "View join requests"
+msgstr "katılma isteklerini görüntüle"
+
+#: myapp/templates/group/group_detail.html:36
+#: myapp/templates/post/group_post.html:36
+msgid "Update Group"
+msgstr "Grubu Güncelle"
+
+#: myapp/templates/group/group_detail.html:38
+#: myapp/templates/group/group_detail.html:43
+#: myapp/templates/post/group_post.html:38
+#: myapp/templates/post/group_post.html:43
+msgid "Group Chat"
+msgstr "Grup Sohbeti"
+
+#: myapp/templates/group/group_detail.html:40
+#: myapp/templates/modals/join_requests.html:31
+#: myapp/templates/post/group_post.html:40
+msgid "Join group"
+msgstr "Gruba katılmak"
+
+#: myapp/templates/group/group_detail.html:42
+#: myapp/templates/modals/join_requests.html:33
+#: myapp/templates/post/group_post.html:42
+msgid "Leave group"
+msgstr "Gruptan ayrıl"
+
+#: myapp/templates/group/group_detail.html:51
+#: myapp/templates/modals/join_requests.html:42
+#: myapp/templates/notifications.html:61 myapp/templates/notifications.html:69
+#: myapp/templates/post/group_post.html:51
+#: myapp/templates/post/show_post.html:58
+#: myapp/templates/post/show_post.html:65 myapp/templates/profile.html:57
+#: myapp/templates/profile.html:65
+msgid "Members"
+msgstr "Üyeler"
+
+#: myapp/templates/group/group_detail.html:67
+#: myapp/templates/modals/join_requests.html:58
+#: myapp/templates/post/group_post.html:67
+msgid "No members yet"
+msgstr "Henüz üye yok"
+
+#: myapp/templates/group/group_detail.html:125 myapp/templates/home.html:133
+#: myapp/templates/profile.html:105
+msgid "Image"
+msgstr "resim"
+
+#: myapp/templates/group/group_detail.html:130 myapp/templates/home.html:138
+msgid "Video"
+msgstr "Video"
+
+#: myapp/templates/group/group_detail.html:135 myapp/templates/home.html:143
+msgid "Sound"
+msgstr "Ses"
+
+#: myapp/templates/group/group_detail.html:163
+#: myapp/templates/post/group_post.html:236
+#: myapp/templates/post/show_post.html:223 myapp/templates/profile.html:127
+msgid "Edit"
+msgstr "Düzenlemek"
+
+#: myapp/templates/group/group_detail.html:173 myapp/templates/home.html:168
+#: myapp/templates/post/group_post.html:96
+#: myapp/templates/post/show_post.html:83 myapp/templates/profile.html:137
+msgid "Posted"
+msgstr "Gönderildi"
+
+#: myapp/templates/group/group_detail.html:173 myapp/templates/home.html:168
+#: myapp/templates/post/group_post.html:96
+#: myapp/templates/post/show_post.html:83 myapp/templates/profile.html:137
+msgid "ago"
+msgstr "evvel"
+
+#: myapp/templates/group/group_detail.html:222 myapp/templates/home.html:220
+#: myapp/templates/post/group_post.html:144
+#: myapp/templates/post/show_post.html:132 myapp/templates/profile.html:186
+msgid "Reactions"
+msgstr "tepkiler"
+
+#: myapp/templates/group/group_detail.html:230 myapp/templates/home.html:229
+#: myapp/templates/post/group_post.html:152
+#: myapp/templates/post/show_post.html:140 myapp/templates/profile.html:194
+msgid "No reactions yet. 0 Reactions"
+msgstr "Henüz tepki yok. 0 Tepki"
+
+#: myapp/templates/group/group_detail.html:239 myapp/templates/home.html:241
+#: myapp/templates/post/group_post.html:163
+#: myapp/templates/post/show_post.html:149
+msgid "You've already reacted to this post!"
+msgstr "Bu gönderiye zaten tepki verdiniz!"
+
+#: myapp/templates/group/group_detail.html:280 myapp/templates/home.html:282
+#: myapp/templates/post/group_post.html:206
+#: myapp/templates/post/show_post.html:192 myapp/templates/profile.html:202
+msgid "Comments"
+msgstr "Yorumlar"
+
+#: myapp/templates/group/group_detail.html:286 myapp/templates/home.html:284
+#: myapp/templates/profile.html:206
+msgid "View Post"
+msgstr "Gönderiyi gör"
+
+#: myapp/templates/group/group_detail.html:292 myapp/templates/profile.html:212
+#: myapp/templates/public_profile.html:68
+msgid "No posts yet"
+msgstr "Henüz gönderi yok"
+
+#: myapp/templates/group/group_detail.html:304
+#: myapp/templates/modals/delete_comment.html:38
+#: myapp/templates/modals/delete_post.html:38
+#: myapp/templates/modals/edit_comment.html:38
+#: myapp/templates/modals/edit_post.html:38
+#: myapp/templates/post/group_post.html:268 myapp/templates/profile.html:39
+#: myapp/templates/profile.html:225
+msgid "Update Profile"
+msgstr "Profili Güncelle"
+
+#: myapp/templates/group/group_detail.html:312
+#: myapp/templates/modals/edit_comment.html:57
+#: myapp/templates/post/group_post.html:276 myapp/templates/profile.html:233
+msgid "Save"
+msgstr "Kaydetmek"
+
+#: myapp/templates/home.html:28 myapp/templates/modals/choose_plan.html:21
+#: myapp/templates/modals/delete_account.html:22
+#: myapp/templates/modals/delete_comment.html:22
+#: myapp/templates/modals/delete_post.html:22
+#: myapp/templates/modals/edit_comment.html:22
+#: myapp/templates/modals/edit_post.html:22
+#: myapp/templates/notifications.html:27 myapp/templates/post/show_post.html:28
+#: myapp/templates/predict_signal.html:20
+#: myapp/templates/prediction_results.html:20 myapp/templates/profile.html:23
+#: myapp/templates/public_profile.html:20
+#: myapp/templates/results_search.html:21 myapp/templates/scanner.html:21
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+#: myapp/templates/home.html:30 myapp/templates/modals/choose_plan.html:23
+#: myapp/templates/modals/delete_account.html:24
+#: myapp/templates/modals/delete_comment.html:24
+#: myapp/templates/modals/delete_post.html:24
+#: myapp/templates/modals/edit_comment.html:24
+#: myapp/templates/modals/edit_post.html:24
+#: myapp/templates/notifications.html:29 myapp/templates/post/show_post.html:30
+#: myapp/templates/predict_signal.html:22
+#: myapp/templates/prediction_results.html:22 myapp/templates/profile.html:25
+#: myapp/templates/public_profile.html:22
+#: myapp/templates/results_search.html:23 myapp/templates/scanner.html:24
+msgid "Bio"
+msgstr "biyo"
+
+#: myapp/templates/home.html:33 myapp/templates/modals/choose_plan.html:26
+#: myapp/templates/modals/delete_account.html:27
+#: myapp/templates/modals/delete_comment.html:27
+#: myapp/templates/modals/delete_post.html:27
+#: myapp/templates/modals/edit_comment.html:27
+#: myapp/templates/modals/edit_post.html:27
+#: myapp/templates/notifications.html:32 myapp/templates/post/show_post.html:33
+#: myapp/templates/predict_signal.html:25
+#: myapp/templates/prediction_results.html:25 myapp/templates/profile.html:28
+#: myapp/templates/public_profile.html:25
+#: myapp/templates/results_search.html:26 myapp/templates/scanner.html:27
+msgid "Birthdate"
+msgstr "Doğum günü"
+
+#: myapp/templates/home.html:36 myapp/templates/modals/choose_plan.html:29
+#: myapp/templates/modals/delete_account.html:30
+#: myapp/templates/modals/delete_comment.html:30
+#: myapp/templates/modals/delete_post.html:30
+#: myapp/templates/modals/edit_comment.html:30
+#: myapp/templates/modals/edit_post.html:30
+#: myapp/templates/notifications.html:35 myapp/templates/post/show_post.html:36
+#: myapp/templates/predict_signal.html:28
+#: myapp/templates/prediction_results.html:28 myapp/templates/profile.html:31
+#: myapp/templates/public_profile.html:28
+#: myapp/templates/results_search.html:29 myapp/templates/scanner.html:30
+msgid "City"
+msgstr "Şehir"
+
+#: myapp/templates/home.html:39 myapp/templates/modals/choose_plan.html:32
+#: myapp/templates/modals/delete_account.html:33
+#: myapp/templates/modals/delete_comment.html:33
+#: myapp/templates/modals/delete_post.html:33
+#: myapp/templates/modals/edit_comment.html:33
+#: myapp/templates/modals/edit_post.html:33
+#: myapp/templates/notifications.html:38 myapp/templates/post/show_post.html:39
+#: myapp/templates/predict_signal.html:31
+#: myapp/templates/prediction_results.html:31 myapp/templates/profile.html:34
+#: myapp/templates/public_profile.html:31
+#: myapp/templates/results_search.html:32 myapp/templates/scanner.html:33
+msgid "Location"
+msgstr "Konum"
+
+#: myapp/templates/home.html:42 myapp/templates/notifications.html:41
+#: myapp/templates/post/show_post.html:42
+msgid "Followers"
+msgstr "Takipçiler"
+
+#: myapp/templates/home.html:45 myapp/templates/notifications.html:44
+#: myapp/templates/post/show_post.html:45
+msgid "Following"
+msgstr "Takip etme"
+
+#: myapp/templates/home.html:53 myapp/templates/post/show_post.html:51
+#: myapp/templates/profile.html:49 myapp/templates/results_search.html:94
+msgid "Groups"
+msgstr "Gruplar"
+
+#: myapp/templates/modals/choose_plan.html:50
+msgid "Choose a Subscription Plan"
+msgstr "Bir Abonelik Planı Seçin"
+
+#: myapp/templates/modals/choose_plan.html:60
+msgid "Subscribe"
+msgstr "Abone"
+
+#: myapp/templates/modals/delete_account.html:51
+#: myapp/templates/modals/delete_account.html:57
+#: myapp/templates/profile.html:42
+msgid "Delete Account"
+msgstr "Hesabı sil"
+
+#: myapp/templates/modals/delete_account.html:54
+msgid "Are you sure you want to delete your account?"
+msgstr "Hesabınızı silmek istediğinizden emin misiniz?"
+
+#: myapp/templates/modals/delete_account.html:58
+#: myapp/templates/modals/delete_comment.html:58
+#: myapp/templates/modals/delete_group.html:13
+#: myapp/templates/modals/delete_post.html:58
+msgid "Cancel"
+msgstr "İptal etmek"
+
+#: myapp/templates/modals/delete_comment.html:51
+#: myapp/templates/post/group_post.html:237
+#: myapp/templates/post/show_post.html:224
+msgid "Delete Comment"
+msgstr "Yorumu Sil"
+
+#: myapp/templates/modals/delete_comment.html:54
+msgid "Are you sure you want to delete this comment?"
+msgstr "Bu yorumu silmek istediğinizden emin misiniz?"
+
+#: myapp/templates/modals/delete_group.html:9
+msgid "Are you sure you want to delete the group"
+msgstr "Grubu silmek istediğinizden emin misiniz?"
+
+#: myapp/templates/modals/delete_post.html:51
+msgid "Delete Post"
+msgstr "Gönderiyi Sil"
+
+#: myapp/templates/modals/delete_post.html:54
+msgid "Are you sure you want to delete this post?"
+msgstr "Bu gönderiyi silmek istediğinizden emin misiniz?"
+
+#: myapp/templates/modals/edit_comment.html:51
+msgid "Edit Comment"
+msgstr "Yorumu Düzenle"
+
+#: myapp/templates/modals/edit_post.html:51
+msgid "Edit Post"
+msgstr "Gönderiyi düzenle"
+
+#: myapp/templates/modals/edit_post.html:57
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: myapp/templates/modals/join_requests.html:73
+msgid "has requested to join the group on"
+msgstr "tarihinde gruba katılmak istedi"
+
+#: myapp/templates/modals/join_requests.html:76
+msgid "Approve"
+msgstr "Onaylamak"
+
+#: myapp/templates/modals/join_requests.html:77
+msgid "Deny"
+msgstr "Reddetmek"
+
+#: myapp/templates/modals/join_requests.html:83
+msgid "No join requests found"
+msgstr "Katılma isteği bulunamadı"
+
+#: myapp/templates/modals/search.html:109
+#: myapp/templates/results_search.html:70
+msgid "Search Results"
+msgstr "Arama Sonuçları"
+
+#: myapp/templates/modals/search.html:119
+#: myapp/templates/modals/search.html:147
+#: myapp/templates/results_search.html:79
+msgid "No users found"
+msgstr "Kullanıcı bulunamadı"
+
+#: myapp/templates/modals/search.html:134
+msgid "No messages"
+msgstr "Mesaj yok"
+
+#: myapp/templates/modals/search.html:139
+#: myapp/templates/modals/search.html:143
+msgid "No threads found"
+msgstr "Konu bulunamadı"
+
+#: myapp/templates/modals/search.html:149
+msgid "No users or threads found"
+msgstr "Kullanıcı veya ileti dizisi bulunamadı"
+
+#: myapp/templates/notifications.html:68 myapp/templates/profile.html:64
+msgid "admin"
+msgstr "yönetici"
+
+#: myapp/templates/notifications.html:105
+msgid "No message notifications"
+msgstr "Mesaj bildirimi yok"
+
+#: myapp/templates/notifications.html:124
+msgid "No post notifications"
+msgstr "Yayın bildirimi yok"
+
+#: myapp/templates/notifications.html:130
+msgid "No notifications"
+msgstr "bildirim yok"
+
+#: myapp/templates/post/group_post.html:250
+#: myapp/templates/post/show_post.html:237
+msgid "No comments yet. Be the first to comment!"
+msgstr "Henüz yorum yok. İlk yorumu siz yapın!"
+
+#: myapp/templates/predict_signal.html:51
+#: myapp/templates/prediction_results.html:52 myapp/templates/scanner.html:54
+msgid "Markets today"
+msgstr "Bugün piyasalar"
+
+#: myapp/templates/predict_signal.html:99
+#: myapp/templates/prediction_results.html:101
+msgid "Predict Market Signal"
+msgstr "Piyasa Sinyalini Tahmin Edin"
+
+#: myapp/templates/predict_signal.html:110
+#: myapp/templates/prediction_results.html:113 myapp/templates/scanner.html:105
+msgid "Submit"
+msgstr "Göndermek"
+
+#: myapp/templates/prediction_results.html:123
+msgid "Signal Results of"
+msgstr "Sinyal Sonuçları"
+
+#: myapp/templates/prediction_results.html:132
+#, python-format
+msgid "Accuracy is above 50%"
+msgstr "Doğruluk 50% üzerinde"
+
+#: myapp/templates/prediction_results.html:136
+#, python-format
+msgid "Accuracy is below 50%. Please consider carefully before making any investment decision"
+msgstr "Doğruluk %50'nin altındadır. Herhangi bir yatırım kararı vermeden önce lütfen dikkatlice düşünün"
+
+#: myapp/templates/prediction_results.html:142
+msgid "Close Price"
+msgstr "Fiyatı Kapat"
+
+#: myapp/templates/prediction_results.html:144
+msgid "Precision"
+msgstr "Kesinlik"
+
+#: myapp/templates/prediction_results.html:145
+msgid "Last Difference Change"
+msgstr "Son Fark Değişimi"
+
+#: myapp/templates/prediction_results.html:146
+msgid "Last Difference Change Percent"
+msgstr "Son Fark Değişim Yüzdesi"
+
+#: myapp/templates/prediction_results.html:152
+msgid "Buy"
+msgstr "Almak"
+
+#: myapp/templates/prediction_results.html:152
+msgid "Sell"
+msgstr "Satmak"
+
+#: myapp/templates/prediction_results.html:166
+msgid "News"
+msgstr "Haberler"
+
+#: myapp/templates/prediction_results.html:180
+msgid "ticker analysis"
+msgstr "hisse senedi analizi"
+
+#: myapp/templates/profile.html:80
+msgid "Subscription Status"
+msgstr "Abonelik durumu"
+
+#: myapp/templates/profile.html:84
+msgid "Your subscription is active"
+msgstr "Aboneliğiniz aktif"
+
+#: myapp/templates/profile.html:84
+msgid "Plan"
+msgstr "Plan"
+
+#: myapp/templates/profile.html:84
+msgid "Subscription End Date"
+msgstr "Abonelik Bitiş Tarihi"
+
+#: myapp/templates/profile.html:86
+msgid "Your subscription is"
+msgstr "aboneliğiniz"
+
+#: myapp/templates/profile.html:86
+msgid "Inactive"
+msgstr "etkin değil"
+
+#: myapp/templates/profile.html:86
+msgid "Choose a plan to unlock predictive features and scanners"
+msgstr "Tahmine dayalı özelliklerin ve tarayıcıların kilidini açmak için bir plan seçin"
+
+#: myapp/templates/profile.html:87
+msgid "Choose Plan"
+msgstr "Plan Seç"
+
+#: myapp/templates/profile.html:94 myapp/templates/profile.html:107
+msgid "Create Group"
+msgstr "Grup oluştur"
+
+#: myapp/templates/profile.html:102
+msgid "Description"
+msgstr "Tanım"
+
+#: myapp/templates/public_profile.html:38
+msgid "Unfollow"
+msgstr "takibi bırak"
+
+#: myapp/templates/public_profile.html:40
+#: myapp/templates/public_profile.html:47
+msgid "Send Message"
+msgstr "Mesaj gönder"
+
+#: myapp/templates/public_profile.html:44
+msgid "Follow"
+msgstr "Takip etmek"
+
+#: myapp/templates/results_search.html:72
+msgid "Users"
+msgstr "Kullanıcılar"
+
+#: myapp/templates/results_search.html:83
+msgid "Posts"
+msgstr "Gönderiler"
+
+#: myapp/templates/results_search.html:90
+msgid "No posts found"
+msgstr "Gönderi bulunamadı"
+
+#: myapp/templates/results_search.html:101
+msgid "No groups found"
+msgstr "grup bulunamadı"
+
+#: myapp/templates/scanner.html:115
+msgid "Ticker"
+msgstr "Kayan yazı"
+
+#: myapp/templates/scanner.html:116
+msgid "Analysis Summary"
+msgstr "Analiz Özeti"
+
+#: myapp/templates/scanner.html:118
+msgid "Oscillators"
+msgstr "Osilatörler"
+
+#: myapp/templates/scanner.html:119
+msgid "Moving Averages"
+msgstr "Hareketli ortalamalar"
+
+#: myapp/templates/scanner.html:132 myapp/templates/scanner.html:153
+#: myapp/templates/scanner.html:174
+msgid "BUY"
+msgstr "SATIN ALMAK"
+
+#: myapp/templates/scanner.html:134 myapp/templates/scanner.html:155
+#: myapp/templates/scanner.html:176
+msgid "STRONG BUY"
+msgstr "GÜÇLÜ SATIN AL"
+
+#: myapp/templates/scanner.html:138 myapp/templates/scanner.html:159
+#: myapp/templates/scanner.html:180
+msgid "NEUTRAL"
+msgstr "Nötr"
+
+#: myapp/templates/scanner.html:142 myapp/templates/scanner.html:163
+#: myapp/templates/scanner.html:184
+msgid "SELL"
+msgstr "SATMAK"
+
+#: myapp/templates/scanner.html:144 myapp/templates/scanner.html:165
+#: myapp/templates/scanner.html:186
+msgid "STRONG SELL"
+msgstr "GÜÇLÜ SATIŞ"
+
+#: myapp/templates/scanner.html:202
+msgid "Stock quotes"
+msgstr "Hisse senedi fiyatları"
+
+#: myapp/templates/scanner.html:206
+msgid "Stocks"
+msgstr "Hisse senetleri"
+
+#: myapp/templates/scanner.html:213
+msgid "Technology"
+msgstr "teknoloji"
+
+#: myapp/templates/scanner.html:246
+msgid "Services"
+msgstr "Hizmetler"
+
+#: myapp/templates/scanner.html:278
+msgid "Forex market heatmap"
+msgstr "Forex piyasası ısı haritası"
+
+#~ msgid "English"
+#~ msgstr "İngilizce"
+
+#~ msgid "Arabic"
+#~ msgstr "Arapça"
+
+#~ msgid "Turkish"
+#~ msgstr "Türkçe"
+
+#~ msgid "French"
+#~ msgstr "Fransızca"
+
+#~ msgid "Spanish"
+#~ msgstr "ispanyol"

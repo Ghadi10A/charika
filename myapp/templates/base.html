@@ -1,0 +1,193 @@
+{% load static %}
+{% load i18n %}
+{% load bootstrap_icons %}
+{% load language_filters %}
+<!DOCTYPE html>
+<html {% get_current_language as LANGUAGE_CODE %} lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% get_language_info for LANGUAGE_CODE as LANGUAGE_INFO %} dir="{{ LANGUAGE_INFO.bidi|yesno:"rtl,ltr" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Charika E-commerce Site{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container">
+{% if is_arabic %}
+<a class="navbar-brand" href="#" style="color:#fff; font-size:bold;">
+    <img src="{% static 'images/text17.png' %}" style="max-width:250px;" alt="...">
+</a>
+{% else %}
+<a class="navbar-brand" href="#" style="color:#fff; font-size:bold;">
+    <img src="{% static 'images/text16.png' %}" style="max-width:250px;" alt="...">
+</a>
+{% endif %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav me-lg-auto justify-content-md-center" style="margin-left: 5rem;">
+    <li class="nav-item {% if request.path == '/' %}active{% else %}gray{% endif %}">
+        <a class="nav-link" href="{% url 'home' %}" style="{% if request.path == '/' %}color:#fff; font-weight:bold;{% else %}color:gray;{% endif %}">{% trans "Home" %}</a>
+    </li>
+    <li class="nav-item {% if request.path == '/cart/' %}active{% else %}gray{% endif %}">
+    <a class="nav-link" href="{% url 'cart' %}" style="{% if request.path == '/cart/' %}color:#fff; font-weight:bold;{% else %}color:gray;{% endif %}">{% trans "Cart" %}</a>
+</li>
+{% if user.is_authenticated %}
+    <li class="nav-item {% if request.resolver_match.url_name == 'orders' %}active{% else %}gray{% endif %}">
+        <a class="nav-link" href="{% url 'orders' username=user.username %}" style="{% if request.resolver_match.url_name == 'orders' %}color:#fff; font-weight:bold;{% else %}color:gray;{% endif %}">{% trans "Orders" %}</a>
+    </li>
+{% endif %}
+
+
+
+
+</ul>
+
+</div>
+
+            <div class="text-end">
+
+                {% if user.is_authenticated %}
+                    <div class="btn-group">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right:11px;">
+  {% if unread_notifications|length > 0 %}
+    {% bs_icon 'bell' extra_classes='text-white position-relative' %} 
+      <span id="notification-count" class="top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ unread_notifications|length }}+</span>
+  {% else %}
+    {% bs_icon 'bell' extra_classes='text-white' %}
+  {% endif %}
+</a>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+    {% for notification in notifications %}
+    <div class="container">
+        <br>
+        <a class="dropdown-item btn-sm{% if not notification.is_read %} font-weight-bold{% endif %}" href="{% if notification.product %}{% url 'show_product' product_id=notification.product.id %}{% elif notification.message %}{% url 'message_thread' notification.message.sender.username %}{% elif notification.stars_feedback %}{% url 'show_product' product_id=notification.stars_feedback.product.id %}{% elif notification.comment %}{% url 'show_post' post_id=notification.comment.post.id %}{% endif %}" onclick="markNotificationAsRead({{ notification.id }})">
+            {% if notification.is_read %}
+            <div class="notification read" style="font-weight: lighter;">
+            {% else %}
+            <div class="notification unread" style="font-weight: bold;">
+            {% endif %}
+                {% if notification.message and notification.message.sender and notification.message.sender.profile.image %}
+                {{ notification.get_notification_type }} <img src="{{ notification.message.sender.profile.image.url }}" alt="{{ notification.message.sender.username }}" width="30" height="30">
+                {% elif notification.product and notification.product.seller and notification.product.seller.profile.image %}
+                {{ notification.get_notification_type }} <img src="{{ notification.product.seller.profile.image.url }}" alt="{{ notification.product.seller.username }}" width="30" height="30">
+                {% elif notification.group_message and notification.group_message.sender and notification.group_message.sender.profile.image %}
+                {{ notification.get_notification_type }} <img src="{{ notification.group_message.sender.profile.image.url }}" alt="{{ notification.group_message..sender.username }}" width="30" height="30">
+                {% elif notification.stars_feedback %}
+                {{ notification.get_notification_type }} <img src="{{ notification.stars_feedback.author.profile.image.url }}" alt="{{ notification.stars_feedback.author.username }}" width="30" height="30">
+                {% elif notification.comment %}
+                {{ notification.get_notification_type }} <img src="{{ notification.comment.author.profile.image.url }}" alt="{{ notification.comment.author.username }}" width="30" height="30">
+                {% else %}
+                {{ notification.get_notification_type }}
+                {% endif %}
+
+                              </div>
+                          </a>
+                        </div>
+                        {% endfor %}
+
+                            <br>
+                             <div class="text-center"><a href="{% url 'notification' %}"><span style="font-size: 14;color: gray;font-size: 12px;">{% trans "View All" %}</span></a></div>
+                          </div>
+                      
+                        <script>
+function markNotificationAsRead(notificationId) {
+    $.ajax({
+        url: "{% url 'mark_notification_as_read' %}",
+        data: {
+            notification_id: notificationId,
+        },
+        dataType: "json",
+        success: function(response) {
+            if (response.success) {
+                // Update the notification count in the dropdown
+                var countElement = $('#notification-count');
+                var count = parseInt(countElement.text());
+                if (count > 0) {
+                    countElement.text(count - 1);
+                }
+                
+                // Redirect to the appropriate page
+                window.location.href = response.redirect_url;
+            } else {
+                alert('Failed to mark notification as read.');
+            }
+        },
+        error: function() {
+            alert('Failed to mark notification as read.');
+        }
+    });
+}
+</script>
+
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" class="rounded-circle me-2" width="32" height="32" alt="{{ user.get_full_name }}">
+                      {% else %}
+                        <img src="{% static 'images/Default_image_profile.png' %}" class="rounded-circle me-2" width="32" height="32">
+                    {% endif %}
+                      {{ user.username }}
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><hr class="dropdown-divider"></li>
+                     <li><a class="dropdown-item" href="{% url 'profile' username=user.username %}">{% bs_icon 'person-fill' %} {% trans "Account" %}</a></li>
+                     <li><a class="dropdown-item" href="{% url 'saved_conversations' %}">{% bs_icon 'chat-dots-fill' %} {% trans "Messages" %}</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li><a class="dropdown-item" href="{% url 'user_logout' %}">{% bs_icon 'power' %} {% trans "log out" %}</a></li>
+                    </ul>
+                        </div>
+                    </div>
+                {% else %}
+                    <a type="button" class="btn btn-outline-light me-2" href="{% url 'user_login' %}">{% trans "Log in" %}</a>
+                    <a type="button" class="btn btn-outline-success me-2" href="{% url 'signup' %}">{% trans "Sign up" %}</a>
+                {% endif %}
+            </div>
+        </div>
+        </nav> 
+
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+     <br>
+  <br>
+  
+        <footer class="navbar navbar-expand navbar-light bg-light fixed-bottom">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'terms_of_service' %}" style="font-size: 11px;">{% trans "Terms of Use" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'privacy_policy' %}" style="font-size: 11px;">{% trans "Privacy Policy" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about_us' %}" style="font-size: 11px;">{% trans "About Us" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact_us' %}" style="font-size: 11px;">{% trans "Contact Us" %}</a>
+                    </li>
+                    <li class="nav-item">
+   <form class="nav-link" method="post" action="{% url 'switch_language' LANGUAGE_CODE %}">
+            {% csrf_token %}
+            <select name="language" onchange="this.form.submit()" style="font-size: 11px;">
+                {% for code, name in LANGUAGES %}
+                    <option value="{{ code }}" {% if code == LANGUAGE_CODE %}selected{% endif %}>{% trans name %}</option>
+                {% endfor %}
+            </select>
+            <noscript><input type="submit" value="{% trans 'Switch' %}"></noscript>
+        </form>
+
+                  </li>
+                </ul>
+                <span class="navbar-text ml-auto" style="font-size: 11px;">{% trans "Copyright" %} &copy; {% trans "2023 All Rights Reserved" %}</span>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<div class="row">
+ 
+  <div class="col-md-4">
+   <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+      <div class="card-body">
+        <div class="text-center">
+         {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" class="rounded-circle me-2" width="200" height="200" alt="{{ user.get_full_name }}">
+                      {% else %}
+    <img src="{% static 'images/Default_image_profile.png' %}" class="rounded-circle me-2" width="200" height="200">
+{% endif %}
+<hr>
+   
+  </div>
+  </div>
+  <div class="container">
+    <h1>{{ user.get_full_name }}</h1>
+    <p><strong>{% trans "Username" %}:</strong> {{ user.username }}</p>
+    {% if user.profile.bio %}
+      <p><strong>{% trans "Bio" %}:</strong> {{ user.profile.bio }}</p>
+    {% endif %}
+    {% if user.profile.birthdate %}
+      <p><strong>{% trans "Birthdate" %}:</strong> {{ user.profile.birthdate }}</p>
+    {% endif %}
+    {% if user.profile.city %}
+      <p><strong>{% trans "City" %}:</strong> {{ user.profile.city }}</p>
+    {% endif %}
+    {% if user.profile.location %}
+      <p><strong>{% trans "Location" %}:</strong> {{ user.profile.location }}</p>
+    {% endif %}
+    <br>
+
+    <button type="button" class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#profileModal" style="margin: 10px;">
+  {% trans "Update Profile" %}
+</button>
+
+
+      </div>
+      
+
+    </div>
+  </div>
+
+   <div class="col-md-7">
+  <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);margin-bottom: 6px;">
+        <div class="card-header">
+          <h2>{% trans "Edit Post" %}</h2>
+        </div>
+        <div class="card-body">
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success btn-sm">{% trans "Save Changes" %}</button>
+  </form>
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+{% endblock %}

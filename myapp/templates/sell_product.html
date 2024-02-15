@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Sell Product - Charika E-commerce{% endblock %}
+
+{% block content %}
+    <h1>Sell a Product</h1>
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Sell Product</button>
+    </form>
+{% endblock %}

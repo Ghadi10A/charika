@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<style>
+    @media (max-width: 767px) {
+  /* CSS styles for screens with a maximum width of 767px */
+
+  .col-md-4,
+  .col-md-7 {
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .rounded-circle {
+    border-radius: 50%;
+  }
+
+  .btn-sm {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .w-100 {
+    width: 100% !important;
+  }
+
+  .btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  .card-header {
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+
+  .card-body ul {
+    padding-left: 10px;
+  }
+
+  .card-body li {
+    margin-bottom: 5px;
+  }
+
+  .card-footer {
+    padding: 5px;
+  }
+
+  .modal-dialog-centered {
+    margin: auto;
+  }
+
+  .modal-content {
+    border-radius: 0;
+  }
+}
+
+</style>
+<br>
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    {% if user.is_authenticated %}
+   <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+      <div class="card-body">
+        <div class="text-center">
+         {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" class="rounded-circle me-2" width="200" height="200" alt="{{ user.get_full_name }}">
+                      {% else %}
+    <img src="{% static 'images/Default_image_profile.png' %}" class="rounded-circle me-2" width="200" height="200">
+{% endif %}
+<hr>
+   
+  </div>
+  </div>
+  <div class="container">
+   <h2 style="font-size:18px;">{{ user.get_full_name }}</h2>
+    <p style="font-size:11px;"><strong>{% trans "Username" %}:</strong> {{ user.username }}</p>
+    {% if user.profile.bio %}
+      <p style="font-size:11px;"><strong>{% trans "Bio" %}:</strong> {{ user.profile.bio }}</p>
+    {% endif %}
+    {% if user.profile.birthdate %}
+      <p style="font-size:11px;"> <strong>{% trans "Birthdate" %}:</strong> {{ user.profile.birthdate }}</p>
+    {% endif %}
+    {% if user.profile.city %}
+      <p style="font-size:11px;"><strong>{% trans "City" %}:</strong> {{ user.profile.city }}</p>
+    {% endif %}
+    {% if user.profile.location %}
+      <p style="font-size:11px;"><strong>{% trans "Location" %}:</strong> {{ user.profile.location }}</p>
+    {% endif %}
+     {% if request.user.username == user.username %}
+      <p style="font-size:11px;"><strong>{% trans "Followers" %}:</strong> {{ user.followers.all|length }}</p>
+      <p style="font-size:11px;"><strong>{% trans "Following" %}:</strong> {{ user.following.all|length }}</p>
+    {% endif %}
+    <br>    
+      </div>
+      
+
+    </div>
+      {% else %}
+  <p>You're not logged in. <a href="{% url 'user_login' %}">{% trans "Sign in" %}</a> to start selling products.</p>
+{% endif %}
+<br>
+<br>
+  </div>
+
+   <div class="col-md-7 mx-auto">
+
+    <div class="container mt-5">
+    <h2 class="mb-4">Payment Canceled</h2>
+    <p>Your payment has been canceled. If you have any questions, please contact support.</p>
+  </div>
+
+
+   </div>
+ </div>
+ 

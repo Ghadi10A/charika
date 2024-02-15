@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<div class="container ">
+  
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);">
+          <div class="card-body">
+          <h4 class="mb-3">{% trans "Saved Conversations" %}</h4>
+          <hr>
+          <form method="GET" action="{% url 'search' %}">
+            {% csrf_token %}
+            {{ search_form.as_p }}
+            <button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
+          </form>
+          <div class="list-group mt-3">
+            {% for conversation in conversations %}
+            {% if conversation.recipient != request.user %}
+              <a href="{% url 'message_thread' conversation.recipient.username %}" class="list-group-item list-group-item-action {% if conversation.unread_messages %}active{% endif %}">
+                {% if conversation.recipient.profile.image %}
+                <img src="{{ conversation.recipient.profile.image.url }}" width="30" height="30" class="rounded-circle mr-2">
+                {% else %}
+                <img src="{% static 'images/Default_image_profile.png' %}" width="30" height="30" class="rounded-circle">
+                  {% endif %}
+                   <span class="text-primary" style="font-size: 11px;">{{ conversation.recipient.username }}</span>
+              </a>
+
+               
+                {% if conversation.unread_messages %}
+                <span>{% trans "Unread" %}:</span>
+                  <span class="badge badge-primary badge-pill float-right">{{ conversation.unread_messages }}</span>
+                {% endif %}
+              </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      {% if users %}
+        <h4>Search Results</h4>
+        <div class="list-group mt-3">
+          {% for user in users %}
+            {% if user != request.user %}
+              <a href="{% url 'message_thread' user.username %}" class="list-group-item list-group-item-action">
+                <img src="{{ user.profile.image.url }}" width="30" height="30" class="rounded-circle mr-2">
+                {{ user.username }}
+              </a>
+            {% endif %}
+          {% empty %}
+            <p>{% trans "No results found" %}.</p>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>{% trans "Select a conversation to view messages" %}.</p>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+{% endblock %}
