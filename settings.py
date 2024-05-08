@@ -100,7 +100,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'charika',
         'USER': 'postgres',
-        'PASSWORD': 'Aminn2023',
+        'PASSWORD': '***',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -146,8 +146,8 @@ AUTHENTICATION_BACKENDS = (
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'APP': {
-            'client_id': '691697894973-33buj89dqi001sd9e2v0f4hvouko1hqp.apps.googleusercontent.com',
-            'secret': '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',
+            'client_id': '***',
+            'secret': 'GOCSPX-***',
             'key': ''
         },
         'SCOPE': [
@@ -160,8 +160,8 @@ SOCIALACCOUNT_PROVIDERS = {
     },
     'microsoft': {
         'APP': {
-            'client_id': '6c07376d-c35b-4141-9893-91c8ba379b6a',
-            'secret': 'aLd8Q~w4cgoeCq~HIxy5jTH5gtEmB-x9DU3IDcfw',
+            'client_id': '***',
+            'secret': 'aLd8Q~*****',
             'tenant': 'common',  # Use 'common' for multi-tenant apps
         },
         'SCOPE': [
@@ -228,16 +228,16 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'contact@chatnun.com' # Replace with your email address
-EMAIL_HOST_PASSWORD = 'Ghadi03@' # Replace with your email password
+EMAIL_HOST_USER = 'contact@charika.com' # Replace with your email address
+EMAIL_HOST_PASSWORD = '***' # Replace with your email password
 EMAIL_USE_OAUTH = True
-EMAIL_CLIENT_ID = '844297491487-6emc7ua3op90mil7so3rbct2uo9sec4c.apps.googleusercontent.com'  # Obtained from the downloaded credentials file
-EMAIL_CLIENT_SECRET = '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'  # Obtained from the downloaded credentials file
-EMAIL_REFRESH_TOKEN = '1//04CvSYqLBFOyrCgYIARAAGAQSNwF-L9IrZTg74zVRefuQPo0qXZTWPK7GC4dWsQa_QXeblSMXHCQT-27RPkeaS9FwpLL5iYZDr84'
+EMAIL_CLIENT_ID = '***'  # Obtained from the downloaded credentials file
+EMAIL_CLIENT_SECRET = '***'  # Obtained from the downloaded credentials file
+EMAIL_REFRESH_TOKEN = '***'
 
 LOCATION_FIELD_PATH = STATIC_URL + 'location_field'
 LOCATION_FIELD = {
     'map.provider': 'openstreetmap',
 }
 
-ADMIN_EMAIL = 'contact@chatnun.com'
+ADMIN_EMAIL = 'contact@charika.com'
