@@ -105,7 +105,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'charika',
         'USER': 'postgres',
-        'PASSWORD': 'Aminn2023',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -152,8 +152,8 @@ AUTHENTICATION_BACKENDS = (
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'APP': {
-            'client_id': '691697894973-33buj89dqi001sd9e2v0f4hvouko1hqp.apps.googleusercontent.com',
-            'secret': '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',
+            'client_id': '',
+            'secret': '',
             'key': ''
         },
         'SCOPE': [
@@ -166,8 +166,8 @@ SOCIALACCOUNT_PROVIDERS = {
     },
     'microsoft': {
         'APP': {
-            'client_id': '6c07376d-c35b-4141-9893-91c8ba379b6a',
-            'secret': 'aLd8Q~w4cgoeCq~HIxy5jTH5gtEmB-x9DU3IDcfw',
+            'client_id': '',
+            'secret': '',
             'tenant': 'common',  # Use 'common' for multi-tenant apps
         },
         'SCOPE': [
@@ -233,7 +233,7 @@ LOCATION_FIELD = {
 'map.provider': 'openstreetmap',
 }
 
-ADMIN_EMAIL = 'contact@chatnun.com'
+ADMIN_EMAIL = 'contact@charika.com'
 LANGUAGE_COOKIE_NAME = 'django_language'
-STRIPE_PUBLISHABLE_KEY = 'pk_live_51MvUwGCTZjMJ7NHQCedzVz1S81Wu4lfjKPk95ZhphhLZjkkbzEctYPw5XX9z8AuN89LBMkpqj45LtR7tpAM6oySr00Tf6XV6q9'
-STRIPE_SECRET_KEY = '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'
+STRIPE_PUBLISHABLE_KEY = '***********'
+STRIPE_SECRET_KEY = '**************'
